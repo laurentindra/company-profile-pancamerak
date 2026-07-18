@@ -8,6 +8,9 @@
     <title>PT PANCA MERAK SAMUDERA - Penyedia Kapal Penumpang & Logistik Batubara</title>
     <meta name="description" content="PT PANCA MERAK SAMUDERA menyediakan solusi angkutan laut hemat biaya dan berkelanjutan. Mengoperasikan armada kapal penumpang Cattleya Express, Queen Soya, Pantokrator, serta kapal tunda Hector & tongkang batubara.">
     
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
