@@ -2,13 +2,21 @@
     "version": 2,
     "functions": {
         "api/index.php": {
-            "runtime": "vercel-php@0.8.0"
+            "runtime": "vercel-php@0.8.0",
+            "includeFiles": [
+                "database/**",
+                "resources/views/**",
+                "bootstrap/**",
+                "config/**",
+                "routes/**",
+                "app/**"
+            ]
         }
     },
     "routes": [
         {
             "src": "/(css|js|images|ships|logo.png|favicon.ico|robots.txt)(.*)",
-            "dest": "/public/$1$2"
+            "dest": "/public/$1/$2"
         },
         {
             "src": "/(.*)",
@@ -18,7 +26,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_KEY": "base64:FVZE3OSUvMcDBnAFil5a5ZSMcfQ6urChjKHugZAIpKc=",
-        "APP_DEBUG": "false",
+        "APP_DEBUG": "true",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
