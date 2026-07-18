@@ -1,5 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- PRELOADER & ENTRANCE ANIMATION ---
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+                document.body.classList.add('loaded');
+            }, 1800);
+        });
+
+        // Backup to force-hide if load event takes too long
+        setTimeout(() => {
+            if (!document.body.classList.contains('loaded')) {
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+                document.body.classList.add('loaded');
+            }
+        }, 4000);
+    } else {
+        document.body.classList.add('loaded');
+    }
+
     // --- MOBILE NAV TOGGLE ---
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');

@@ -17,6 +17,21 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
+    <!-- Preloader / Welcome Animation -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo-wrapper">
+                <img src="{{ asset('images/logo.png') }}" alt="PT PANCA MERAK SAMUDERA Logo" class="preloader-logo">
+            </div>
+            <div class="preloader-brand">
+                <span class="p-title">PANCA MERAK SAMUDERA</span>
+                <span class="p-subtitle">Est. 2001</span>
+            </div>
+            <div class="preloader-loader">
+                <div class="preloader-bar"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- Top Info Bar -->
     <div class="top-bar">
