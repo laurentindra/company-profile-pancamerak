@@ -1477,6 +1477,10 @@ img {
     .news-grid {
         grid-template-columns: 1fr !important;
     }
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
     .fleet-detail-section > .container > div {
         grid-template-columns: 1fr !important;
         gap: 30px !important;
