@@ -29,6 +29,6 @@
         "SESSION_DRIVER": "cookie",
         "LOG_CHANNEL": "stderr",
         "DB_CONNECTION": "sqlite",
-        "DB_DATABASE": "/var/task/database/database.sqlite"
+        "DB_DATABASE": "/var/task/user/database/database.sqlite"
     }
 }
