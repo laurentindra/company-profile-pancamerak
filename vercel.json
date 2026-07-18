@@ -19,7 +19,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_KEY": "base64:FVZE3OSUvMcDBnAFil5a5ZSMcfQ6urChjKHugZAIpKc=",
-        "APP_DEBUG": "true",
+        "APP_DEBUG": "false",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
