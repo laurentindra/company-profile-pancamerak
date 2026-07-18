@@ -3,7 +3,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "vite build",
+        "build": "echo 'Skipping Vite build because we use static public assets'",
         "dev": "vite"
     },
     "devDependencies": {
