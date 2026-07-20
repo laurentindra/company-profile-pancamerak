@@ -392,19 +392,19 @@ img {
     gap: 20px;
 }
 .stat-card {
-    background: linear-gradient(135deg, rgba(220, 38, 38, 0.85) 0%, rgba(185, 28, 28, 0.90) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.35) 0%, rgba(153, 27, 27, 0.20) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     padding: 24px;
     border-radius: var(--radius-md);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
     transition: var(--transition-smooth);
-    box-shadow: 0 8px 20px rgba(185, 28, 28, 0.3);
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.15);
 }
 .stat-card:hover {
     transform: translateY(-5px);
-    background: linear-gradient(135deg, rgba(239, 68, 68, 0.95) 0%, rgba(220, 38, 38, 0.95) 100%);
-    border-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 12px 28px rgba(185, 28, 28, 0.5);
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.50) 0%, rgba(185, 28, 28, 0.35) 100%);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 12px 30px rgba(220, 38, 38, 0.3);
 }
 .stat-card h3 {
     font-size: 2.2rem;
