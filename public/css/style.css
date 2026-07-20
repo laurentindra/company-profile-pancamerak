@@ -283,16 +283,18 @@ img {
     width: 100%;
 }
 .contact-btn {
-    background-color: var(--accent-cyan);
+    background-color: var(--accent-orange);
     color: #ffffff;
     padding: 10px 20px;
     border-radius: var(--radius-sm);
     border: 1px solid transparent;
 }
 .contact-btn:hover {
-    background-color: transparent;
-    border-color: var(--accent-cyan);
-    color: var(--accent-cyan-light);
+    background-color: var(--accent-orange-hover);
+    border-color: var(--accent-orange-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
 }
 .contact-btn::after {
     display: none !important;
