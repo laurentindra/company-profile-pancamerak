@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Page Header Banner -->
-<section class="page-header" style="background: linear-gradient(135deg, #020617 0%, #0f172a 100%); padding: 60px 0; border-bottom: 1px solid var(--border-dark); text-align: center; color: #ffffff;">
+<section class="page-header" style="background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%); padding: 60px 0; border-bottom: 1px solid var(--border-dark); text-align: center; color: #ffffff;">
     <div class="container">
         <span class="sub-title">Profil Korporat</span>
         <h1 style="font-size: 2.5rem; margin-top: 10px;">Tentang Kami</h1>
@@ -91,7 +91,7 @@
         
         <div class="management-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px;">
             <div class="member-card" style="background-color: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 30px; text-align: center; box-shadow: var(--shadow-sm); transition: var(--transition-smooth);">
-                <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #0ea5e9 0%, #1e293b 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
+                <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
                     <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                 </div>
                 <h4 style="color: var(--primary-navy); font-size: 1.1rem; margin-bottom: 4px;">Capt. H. Panca Merak, M.Mar.</h4>
@@ -100,7 +100,7 @@
             </div>
             
             <div class="member-card" style="background-color: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 30px; text-align: center; box-shadow: var(--shadow-sm); transition: var(--transition-smooth);">
-                <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #0ea5e9 0%, #1e293b 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
+                <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
                     <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                 </div>
                 <h4 style="color: var(--primary-navy); font-size: 1.1rem; margin-bottom: 4px;">H. Merak Panca, S.E.</h4>
@@ -109,7 +109,7 @@
             </div>
             
             <div class="member-card" style="background-color: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 30px; text-align: center; box-shadow: var(--shadow-sm); transition: var(--transition-smooth);">
-                <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #0ea5e9 0%, #1e293b 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
+                <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
                     <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                 </div>
                 <h4 style="color: var(--primary-navy); font-size: 1.1rem; margin-bottom: 4px;">Capt. Setyo Utomo, M.Mar.</h4>
@@ -183,3 +183,5 @@
 </section>
 
 @endsection
+
+

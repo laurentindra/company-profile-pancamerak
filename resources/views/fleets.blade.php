@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Page Header Banner -->
-<section class="page-header" style="background: linear-gradient(135deg, #020617 0%, #0f172a 100%); padding: 60px 0; border-bottom: 1px solid var(--border-dark); text-align: center; color: #ffffff;">
+<section class="page-header" style="background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%); padding: 60px 0; border-bottom: 1px solid var(--border-dark); text-align: center; color: #ffffff;">
     <div class="container">
         <span class="sub-title">Daftar Armada</span>
         <h1 style="font-size: 2.5rem; margin-top: 10px;">Armada Perkapalan</h1>
@@ -62,3 +62,4 @@
 </section>
 
 @endsection
+

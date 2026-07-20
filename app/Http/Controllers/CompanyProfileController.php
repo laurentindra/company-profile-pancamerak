@@ -12,10 +12,9 @@ class CompanyProfileController extends Controller
 {
     public function home()
     {
-        // Get featured passenger ships for homepage slider/cards
         $featuredShips = Ship::where('type', 'passenger')->take(3)->get();
         
-        // Get distinct ports for search form on home
+   
         $origins = Schedule::select('origin_port')->distinct()->pluck('origin_port');
         $destinations = Schedule::select('destination_port')->distinct()->pluck('destination_port');
         
@@ -34,11 +33,11 @@ class CompanyProfileController extends Controller
 
     public function schedules()
     {
-        // Get distinct ports for search form
+    
         $origins = Schedule::select('origin_port')->distinct()->pluck('origin_port');
         $destinations = Schedule::select('destination_port')->distinct()->pluck('destination_port');
         
-        // Get all passenger ships with schedules to show default rates
+
         $passengerShips = Ship::where('type', 'passenger')->with('schedules')->get();
         
         return view('schedules', compact('origins', 'destinations', 'passengerShips'));
@@ -54,7 +53,7 @@ class CompanyProfileController extends Controller
     {
         $ship = Ship::with('schedules')->findOrFail($id);
         
-        // Suggest related ships of the same type
+        
         $relatedShips = Ship::where('type', $ship->type)
             ->where('id', '!=', $ship->id)
             ->take(3)
@@ -85,7 +84,7 @@ class CompanyProfileController extends Controller
             ->where('destination_port', $destination);
 
         if ($dateStr) {
-            // Map English day of week to Indonesian day name
+            
             $dayEnglish = Carbon::parse($dateStr)->format('l');
             $dayMap = [
                 'Monday' => 'Senin',
@@ -98,7 +97,7 @@ class CompanyProfileController extends Controller
             ];
             $dayIndo = $dayMap[$dayEnglish] ?? '';
 
-            // Search schedules that sail on that day of week
+           
             if ($dayIndo) {
                 $query->where('days_of_week', 'like', "%{$dayIndo}%");
             }
@@ -112,4 +111,4 @@ class CompanyProfileController extends Controller
             'day_searched' => isset($dayIndo) ? $dayIndo : null
         ]);
     }
-}
+}   

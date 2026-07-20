@@ -228,7 +228,7 @@
         
         <div class="news-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px;">
             <div class="news-card" style="background-color: var(--bg-light); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column;">
-                <div style="height: 180px; background: linear-gradient(135deg, #0ea5e9 0%, #1e293b 100%); display: flex; align-items: center; justify-content: center; color: #ffffff;">
+                <div style="height: 180px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); display: flex; align-items: center; justify-content: center; color: #ffffff;">
                     <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2z"/><polyline points="14 2 14 8 20 8"/></svg>
                 </div>
                 <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
@@ -240,7 +240,7 @@
             </div>
             
             <div class="news-card" style="background-color: var(--bg-light); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column;">
-                <div style="height: 180px; background: linear-gradient(135deg, #38bdf8 0%, #0f172a 100%); display: flex; align-items: center; justify-content: center; color: #ffffff;">
+                <div style="height: 180px; background: linear-gradient(135deg, #60a5fa 0%, #1d4ed8 100%); display: flex; align-items: center; justify-content: center; color: #ffffff;">
                     <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 </div>
                 <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
@@ -252,7 +252,7 @@
             </div>
             
             <div class="news-card" style="background-color: var(--bg-light); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column;">
-                <div style="height: 180px; background: linear-gradient(135deg, #0284c7 0%, #1e293b 100%); display: flex; align-items: center; justify-content: center; color: #ffffff;">
+                <div style="height: 180px; background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); display: flex; align-items: center; justify-content: center; color: #ffffff;">
                     <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
                 </div>
                 <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
@@ -267,3 +267,5 @@
 </section>
 
 @endsection
+
+

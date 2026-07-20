@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Page Header Breadcrumb -->
-<section class="page-header" style="background: linear-gradient(135deg, #020617 0%, #0f172a 100%); padding: 50px 0; border-bottom: 1px solid var(--border-dark); color: #ffffff;">
+<section class="page-header" style="background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%); padding: 50px 0; border-bottom: 1px solid var(--border-dark); color: #ffffff;">
     <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
         <div>
             <span class="modal-badge" style="margin-bottom: 8px; display: inline-block;">
@@ -173,3 +173,4 @@
 </section>
 
 @endsection
+
