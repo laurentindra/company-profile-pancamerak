@@ -18,6 +18,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // 0. SEED ADMIN USER
+        User::firstOrCreate(
+            ['email' => 'admin@pancamerak.co.id'],
+            [
+                'name' => 'Administrator PMS',
+                'password' => \Illuminate\Support\Facades\Hash::make('admin123'),
+            ]
+        );
+
         // 1. SEED SHIPS
         $cattleya = Ship::create([
             'name' => 'Cattleya Express',
