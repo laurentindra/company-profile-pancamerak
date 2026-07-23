@@ -56,74 +56,53 @@
         </div>
     </div>
 
-    <!-- Official Kop Surat Header -->
-    <header class="official-pms-header">
-        <div class="pms-letterhead-banner">
-            <div class="container pms-letterhead-wrapper">
-                <div class="pms-logo-col">
-                    <a href="{{ route('home') }}">
-                        <img src="{{ asset('images/logo.png') }}" alt="Logo PT PANCA MERAK SAMUDERA" class="pms-header-logo">
-                    </a>
+    <!-- Streamlined Kop Surat Header -->
+    <header class="header">
+        <div class="container header-container">
+            <!-- Brand Logo & Kop Surat Title -->
+            <a href="{{ route('home') }}" class="logo">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo PT PANCA MERAK SAMUDERA" class="logo-img">
+                <div class="logo-text">
+                    <span class="brand-subtitle">PERUSAHAAN ANGKUTAN LAUT</span>
+                    <span class="brand-title">P.T. PANCA MERAK SAMUDERA</span>
                 </div>
+            </a>
 
-                <div class="pms-title-col">
-                    <span class="pms-header-subtitle">PERUSAHAAN ANGKUTAN LAUT</span>
-                    <h1 class="pms-header-title">P.T. PANCA MERAK SAMUDERA</h1>
+            <!-- Compact Single-Line Office Contacts -->
+            <div class="header-offices-strip">
+                <div class="office-tag">
+                    <strong>Pusat (SBY):</strong> (031) 3522385
                 </div>
-
-                <div class="pms-address-col">
-                    <div class="pms-address-block">
-                        <span class="pms-address-header">Pusat :</span>
-                        <p>Jl. Krembangan Timur No. 8 - 10</p>
-                        <p>Telp. (031) 3522385, 3523756</p>
-                        <p>Fax. (031) 3539432</p>
-                        <p>Surabaya</p>
-                    </div>
-
-                    <div class="pms-address-block" style="margin-top: 6px;">
-                        <span class="pms-address-header">Cabang :</span>
-                        <p>Jl. Arif Rahman hakim RT. 002 No. 32</p>
-                        <p>Kel. Sungai Pinang Luar</p>
-                        <p>Kec. Samarinda Kota 75115</p>
-                        <p>Telp. (0541) 7273080</p>
-                        <p>Samarinda, Kalimantan Timur</p>
-                    </div>
-
-                    <div class="pms-address-block" style="margin-top: 4px;">
-                        <p>Jl. Bau Massepe F-419</p>
-                        <p>Telp. (0421) 21649 Fax. (0421) 22777</p>
-                        <p>Pare-pare ( Sul-sel )</p>
-                    </div>
+                <span class="office-divider">|</span>
+                <div class="office-tag">
+                    <strong>Cab. Samarinda:</strong> (0541) 7273080
+                </div>
+                <span class="office-divider">|</span>
+                <div class="office-tag">
+                    <strong>Cab. Parepare:</strong> (0421) 21649
                 </div>
             </div>
 
-            <!-- Double Blue Line -->
-            <div class="container">
-                <div class="pms-double-line"></div>
-            </div>
+            <!-- 3-Lines Hamburger Icon Toggle -->
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Nav Menu Dropdown (Appears when hamburger is clicked) -->
+            <nav class="nav-menu">
+                <a href="{{ route('home') }}" class="nav-link {{ Route::is('home') ? 'active' : '' }}">Beranda</a>
+                <a href="{{ route('about') }}" class="nav-link {{ Route::is('about') ? 'active' : '' }}">Profil</a>
+                <a href="{{ route('services') }}" class="nav-link {{ Route::is('services') ? 'active' : '' }}">Layanan</a>
+                <a href="{{ route('schedules') }}" class="nav-link {{ Route::is('schedules') ? 'active' : '' }}">Jadwal & Tarif</a>
+                <a href="{{ route('fleets') }}" class="nav-link {{ Route::is('fleets') || Route::is('fleets.detail') ? 'active' : '' }}">Armada Kami</a>
+                <a href="{{ route('contact') }}" class="nav-link contact-btn {{ Route::is('contact') ? 'active' : '' }}">Hubungi Kami</a>
+            </nav>
         </div>
 
-        <!-- Sticky Navigation Bar with Hamburger Icon -->
-        <div class="header-nav-bar">
-            <div class="container nav-bar-container">
-                <!-- 3-Lines Hamburger Button -->
-                <button class="nav-toggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-                <!-- Nav Menu Dropdown -->
-                <nav class="nav-menu">
-                    <a href="{{ route('home') }}" class="nav-link {{ Route::is('home') ? 'active' : '' }}">Beranda</a>
-                    <a href="{{ route('about') }}" class="nav-link {{ Route::is('about') ? 'active' : '' }}">Profil</a>
-                    <a href="{{ route('services') }}" class="nav-link {{ Route::is('services') ? 'active' : '' }}">Layanan</a>
-                    <a href="{{ route('schedules') }}" class="nav-link {{ Route::is('schedules') ? 'active' : '' }}">Jadwal & Tarif</a>
-                    <a href="{{ route('fleets') }}" class="nav-link {{ Route::is('fleets') || Route::is('fleets.detail') ? 'active' : '' }}">Armada Kami</a>
-                    <a href="{{ route('contact') }}" class="nav-link contact-btn {{ Route::is('contact') ? 'active' : '' }}">Hubungi Kami</a>
-                </nav>
-            </div>
-        </div>
+        <!-- Double Blue Line at bottom of Header -->
+        <div class="header-double-line"></div>
     </header>
 
     <!-- Main Content Area -->
