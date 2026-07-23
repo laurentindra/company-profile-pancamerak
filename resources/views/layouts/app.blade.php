@@ -56,33 +56,75 @@
         </div>
     </div>
 
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container header-container">
-            <a href="{{ route('home') }}" class="logo">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo PT PANCA MERAK SAMUDERA" class="logo-img">
-                <div class="logo-text">
-                    <span class="brand-title">PANCA MERAK</span>
-                    <span class="brand-subtitle">SAMUDERA</span>
+    <!-- Official Kop Surat Header -->
+    <header class="official-pms-header">
+        <div class="pms-letterhead-banner">
+            <div class="container pms-letterhead-wrapper">
+                <div class="pms-logo-col">
+                    <a href="{{ route('home') }}">
+                        <img src="{{ asset('images/logo.png') }}" alt="Logo PT PANCA MERAK SAMUDERA" class="pms-header-logo">
+                    </a>
                 </div>
-            </a>
 
-            <!-- Mobile Nav Toggle -->
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+                <div class="pms-title-col">
+                    <span class="pms-header-subtitle">PERUSAHAAN ANGKUTAN LAUT</span>
+                    <h1 class="pms-header-title">P.T. PANCA MERAK SAMUDERA</h1>
+                </div>
 
-            <!-- Nav Menu -->
-            <nav class="nav-menu">
-                <a href="{{ route('home') }}" class="nav-link {{ Route::is('home') ? 'active' : '' }}">Beranda</a>
-                <a href="{{ route('about') }}" class="nav-link {{ Route::is('about') ? 'active' : '' }}">Profil</a>
-                <a href="{{ route('services') }}" class="nav-link {{ Route::is('services') ? 'active' : '' }}">Layanan</a>
-                <a href="{{ route('schedules') }}" class="nav-link {{ Route::is('schedules') ? 'active' : '' }}">Jadwal & Tarif</a>
-                <a href="{{ route('fleets') }}" class="nav-link {{ Route::is('fleets') || Route::is('fleets.detail') ? 'active' : '' }}">Armada Kami</a>
-                <a href="{{ route('contact') }}" class="nav-link contact-btn {{ Route::is('contact') ? 'active' : '' }}">Hubungi Kami</a>
-            </nav>
+                <div class="pms-address-col">
+                    <div class="pms-address-block">
+                        <span class="pms-address-header">Pusat :</span>
+                        <p>Jl. Krembangan Timur No. 8 - 10</p>
+                        <p>Telp. (031) 3522385, 3523756</p>
+                        <p>Fax. (031) 3539432</p>
+                        <p>Surabaya</p>
+                    </div>
+
+                    <div class="pms-address-block" style="margin-top: 6px;">
+                        <span class="pms-address-header">Cabang :</span>
+                        <p>Jl. Arif Rahman hakim RT. 002 No. 32</p>
+                        <p>Kel. Sungai Pinang Luar</p>
+                        <p>Kec. Samarinda Kota 75115</p>
+                        <p>Telp. (0541) 7273080</p>
+                        <p>Samarinda, Kalimantan Timur</p>
+                    </div>
+
+                    <div class="pms-address-block" style="margin-top: 4px;">
+                        <p>Jl. Bau Massepe F-419</p>
+                        <p>Telp. (0421) 21649 Fax. (0421) 22777</p>
+                        <p>Pare-pare ( Sul-sel )</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Double Blue Line -->
+            <div class="container">
+                <div class="pms-double-line"></div>
+            </div>
+        </div>
+
+        <!-- Sticky Navigation Bar with Hamburger Icon -->
+        <div class="header-nav-bar">
+            <div class="container nav-bar-container">
+                <span class="nav-bar-brand">MENU UTAMA</span>
+
+                <!-- 3-Lines Hamburger Button -->
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Nav Menu Dropdown -->
+                <nav class="nav-menu">
+                    <a href="{{ route('home') }}" class="nav-link {{ Route::is('home') ? 'active' : '' }}">Beranda</a>
+                    <a href="{{ route('about') }}" class="nav-link {{ Route::is('about') ? 'active' : '' }}">Profil</a>
+                    <a href="{{ route('services') }}" class="nav-link {{ Route::is('services') ? 'active' : '' }}">Layanan</a>
+                    <a href="{{ route('schedules') }}" class="nav-link {{ Route::is('schedules') ? 'active' : '' }}">Jadwal & Tarif</a>
+                    <a href="{{ route('fleets') }}" class="nav-link {{ Route::is('fleets') || Route::is('fleets.detail') ? 'active' : '' }}">Armada Kami</a>
+                    <a href="{{ route('contact') }}" class="nav-link contact-btn {{ Route::is('contact') ? 'active' : '' }}">Hubungi Kami</a>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -91,54 +133,58 @@
         @yield('content')
     </main>
 
-    <!-- Footer Section (Official Kop Surat PT PANCA MERAK SAMUDERA Design) -->
-    <footer class="pms-official-footer">
-        <div class="container pms-footer-wrapper">
-            <div class="pms-footer-logo-col">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo PT PANCA MERAK SAMUDERA" class="pms-footer-logo">
+    <!-- Footer Section (Restored Original Dark 3-Column Theme) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col about-col">
+                <div class="footer-logo" style="display: flex; align-items: center; gap: 10px;">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo PT PANCA MERAK SAMUDERA" class="logo-img" style="height: 38px;">
+                    <span>PT PANCA MERAK SAMUDERA</span>
+                </div>
+                <p class="footer-desc">
+                    Perusahaan pelayaran nasional penyedia jasa transportasi laut untuk penumpang dan logistik curah batubara. Terpercaya sejak 2001 dengan komitmen keselamatan, efisiensi biaya, dan operasi berkelanjutan.
+                </p>
+                <div class="legal-tag">
+                    <strong>SIUPAL:</strong> BXXV-1753/AL-58<br>
+                    <strong>NPWP:</strong> 02.091.781.1-605.000
+                </div>
             </div>
 
-            <div class="pms-footer-title-col">
-                <span class="pms-footer-subtitle">PERUSAHAAN ANGKUTAN LAUT</span>
-                <h2 class="pms-footer-title">P.T. PANCA MERAK SAMUDERA</h2>
+            <div class="footer-col links-col">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="{{ route('home') }}">Beranda</a></li>
+                    <li><a href="{{ route('about') }}">Profil & Sejarah</a></li>
+                    <li><a href="{{ route('services') }}">Layanan Bisnis</a></li>
+                    <li><a href="{{ route('schedules') }}">Pencarian Jadwal</a></li>
+                    <li><a href="{{ route('fleets') }}">Armada Kapal</a></li>
+                </ul>
             </div>
 
-            <div class="pms-footer-address-col">
-                <div class="pms-address-group">
-                    <span class="pms-address-label">Pusat :</span>
-                    <p>Jl. Krembangan Timur No. 8 - 10</p>
-                    <p>Telp. (031) 3522385, 3523756</p>
-                    <p>Fax. (031) 3539432</p>
-                    <p>Surabaya</p>
+            <div class="footer-col branch-col">
+                <h4>Kantor Cabang</h4>
+                <div class="branch-item">
+                    <h5>Surabaya (Head Office)</h5>
+                    <p>Jl. Krembangan Timur No. 8-10, Surabaya, Jawa Timur</p>
+                    <p>Telp: (031) 3522385, 3523756 | Fax: (031) 3539432</p>
                 </div>
-
-                <div class="pms-address-group" style="margin-top: 10px;">
-                    <span class="pms-address-label">Cabang :</span>
-                    <p>Jl. Arif Rahman hakim RT. 002 No. 32</p>
-                    <p>Kel. Sungai Pinang Luar</p>
-                    <p>Kec. Samarinda Kota 75115</p>
-                    <p>Telp. (0541) 7273080</p>
-                    <p>Samarinda, Kalimantan Timur</p>
+                <div class="branch-item">
+                    <h5>Samarinda (Cabang)</h5>
+                    <p>Jl. Arif Rahman Hakim Rt. 02 No. 32, Kel. Sungai Pinang Luar, Samarinda</p>
+                    <p>Telp: (0541) 727 3080 | Fax: (0541) 727 3070</p>
                 </div>
-
-                <div class="pms-address-group" style="margin-top: 8px;">
-                    <p>Jl. Bau Massepe F-419</p>
-                    <p>Telp. (0421) 21649 Fax. (0421) 22777</p>
-                    <p>Pare-pare ( Sul-sel )</p>
+                <div class="branch-item">
+                    <h5>Pare-Pare (Cabang)</h5>
+                    <p>Jl. Bau Massepe No. 419E-419F, Pare-Pare, Sulawesi Selatan</p>
+                    <p>Telp: (0421) 21649 | Fax: (0421) 28866</p>
                 </div>
             </div>
         </div>
 
-        <!-- Double Blue Lines -->
-        <div class="pms-footer-lines-container">
-            <div class="container">
-                <div class="pms-double-line"></div>
-            </div>
-        </div>
-
-        <div class="pms-footer-copyright">
-            <div class="container">
-                <p>&copy; {{ date('Y') }} P.T. PANCA MERAK SAMUDERA - Perusahaan Angkutan Laut. Hak Cipta Dilindungi Undang-Undang.</p>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; {{ date('Y') }} PT PANCA MERAK SAMUDERA. Hak Cipta Dilindungi Undang-Undang.</p>
+                <p>Designed with Excellence</p>
             </div>
         </div>
     </footer>

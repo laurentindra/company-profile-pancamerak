@@ -199,57 +199,120 @@ img {
     border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
-/* Header & Sticky Navbar */
-.header {
+/* Official Kop Surat Header */
+.official-pms-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.pms-letterhead-banner {
+    padding: 24px 0 10px;
+}
+
+.pms-letterhead-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.pms-logo-col {
+    flex: 0 0 130px;
+}
+
+.pms-header-logo {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+.pms-title-col {
+    flex: 1;
+    text-align: center;
+}
+
+.pms-header-subtitle {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #2563eb; /* Blue subtitle */
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.pms-header-title {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 2.2rem;
+    color: #f87171; /* Coral Red title */
+    letter-spacing: 2.5px;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.pms-address-col {
+    flex: 0 0 320px;
+    text-align: right;
+    font-size: 0.78rem;
+    color: #1e40af;
+    line-height: 1.35;
+    font-style: italic;
+}
+
+.pms-address-header {
+    font-weight: 700;
+    font-style: normal;
+    display: block;
+    font-size: 0.82rem;
+    color: #1e3a8a;
+}
+
+.pms-address-block p {
+    margin: 0;
+}
+
+.pms-double-line {
+    border-top: 2px solid #2563eb;
+    border-bottom: 1px solid #2563eb;
+    height: 4px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Header Navigation Bar (Sticky with Hamburger Toggle) */
+.header-nav-bar {
     background-color: #2563eb;
-    backdrop-filter: blur(10px);
-    color: #ffffff;
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 14px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    transition: var(--transition-smooth);
+    padding: 12px 0;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
 }
-.header-container {
+
+.nav-bar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
 }
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.logo-text {
-    display: flex;
-    flex-direction: column;
-}
-.brand-title {
+
+.nav-bar-brand {
+    font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
+    font-size: 0.95rem;
     color: #ffffff;
-}
-.brand-subtitle {
-    font-weight: 500;
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    color: #93c5fd;
-}
-.logo-img {
-    height: 44px;
-    width: auto;
-    object-fit: contain;
+    letter-spacing: 1.5px;
 }
 
-/* 3-Lines Hamburger Button (Always Present) */
+/* 3-Lines Hamburger Icon (Always Present) */
 .nav-toggle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 32px;
+    width: 30px;
     height: 22px;
     background: transparent;
     border: none;
@@ -257,6 +320,7 @@ img {
     z-index: 1002;
     padding: 0;
 }
+
 .nav-toggle span {
     background-color: #ffffff;
     height: 3px;
@@ -264,20 +328,23 @@ img {
     border-radius: 3px;
     transition: all 0.3s ease-in-out;
 }
+
 .nav-toggle.active span:nth-child(1) {
     transform: translateY(9.5px) rotate(45deg);
 }
+
 .nav-toggle.active span:nth-child(2) {
     opacity: 0;
 }
+
 .nav-toggle.active span:nth-child(3) {
     transform: translateY(-9.5px) rotate(-45deg);
 }
 
-/* Dropdown Nav Menu (Inside Hamburger Toggle) */
+/* Dropdown Menu Overlay */
 .nav-menu {
     position: absolute;
-    top: calc(100% + 14px);
+    top: calc(100% + 12px);
     right: 0;
     width: 280px;
     background-color: #1d4ed8;
@@ -295,11 +362,13 @@ img {
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 1001;
 }
+
 .nav-menu.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
+
 .nav-link {
     font-family: var(--font-heading);
     font-weight: 600;
@@ -311,10 +380,12 @@ img {
     transition: var(--transition-smooth);
     display: block;
 }
+
 .nav-link:hover, .nav-link.active {
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0.15);
 }
+
 .nav-link.active::after {
     content: '';
     position: absolute;
@@ -325,6 +396,7 @@ img {
     background-color: #60a5fa;
     border-radius: 2px;
 }
+
 .contact-btn {
     background-color: #dc2626 !important;
     color: #ffffff !important;
@@ -335,12 +407,24 @@ img {
     margin-top: 6px;
     box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
 }
+
 .contact-btn:hover {
     background-color: #b91c1c !important;
     transform: translateY(-2px);
 }
-.contact-btn::after {
-    display: none !important;
+
+@media (max-width: 992px) {
+    .pms-letterhead-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .pms-header-title {
+        font-size: 1.6rem;
+    }
+    .pms-address-col {
+        text-align: center;
+        flex: 1;
+    }
 }
 
 /* Hero Section */
@@ -1101,115 +1185,93 @@ img {
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
-/* Official Kop Surat PMS Footer (Matching Image 1) */
-.pms-official-footer {
-    background-color: #ffffff;
-    color: #1e3a8a;
-    padding: 40px 0 20px;
-    border-top: 1px solid #e2e8f0;
+/* Footer Section */
+.footer {
+    background-color: var(--tertiary-navy);
+    color: var(--text-dark-muted);
+    padding: 80px 0 0;
+    border-top: 1px solid var(--border-dark);
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.6fr 1.4fr;
+    gap: 60px;
+    padding-bottom: 50px;
+}
+.about-col .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.about-col .footer-logo svg {
+    color: var(--accent-cyan-light);
+}
+.footer-desc {
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+.legal-tag {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-dark);
+}
+.links-col h4, .branch-col h4 {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+.links-col h4::after, .branch-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--accent-cyan-light);
+}
+.links-col ul li {
+    margin-bottom: 12px;
+}
+.links-col ul li a {
+    font-size: 0.85rem;
+}
+.links-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 4px;
+}
+.branch-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.branch-item h5 {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+.branch-item p {
+    font-size: 0.8rem;
+    line-height: 1.4;
 }
 
-.pms-footer-wrapper {
+.footer-bottom {
+    border-top: 1px solid var(--border-dark);
+    padding: 24px 0;
+}
+.footer-bottom-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-}
-
-.pms-footer-logo-col {
-    flex: 0 0 140px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.pms-footer-logo {
-    width: 130px;
-    height: auto;
-    object-fit: contain;
-}
-
-.pms-footer-title-col {
-    flex: 1;
-    text-align: center;
-}
-
-.pms-footer-subtitle {
-    display: block;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: #2563eb; /* Blue subtitle */
-    letter-spacing: 2px;
-    margin-bottom: 4px;
-    text-transform: uppercase;
-}
-
-.pms-footer-title {
-    font-family: var(--font-heading);
-    font-weight: 900;
-    font-size: 2.2rem;
-    color: #f87171; /* Coral Red title as in Kop Surat */
-    letter-spacing: 2.5px;
-    margin: 0;
-    text-transform: uppercase;
-    line-height: 1.2;
-}
-
-.pms-footer-address-col {
-    flex: 0 0 320px;
-    text-align: right;
-    font-size: 0.8rem;
-    color: #1e40af;
-    line-height: 1.35;
-    font-style: italic;
-}
-
-.pms-address-label {
-    font-weight: 700;
-    font-style: normal;
-    display: block;
-    font-size: 0.85rem;
-    color: #1e3a8a;
-    margin-bottom: 2px;
-}
-
-.pms-address-group p {
-    margin: 0;
-}
-
-.pms-footer-lines-container {
-    margin-top: 25px;
-    margin-bottom: 15px;
-}
-
-.pms-double-line {
-    border-top: 2px solid #2563eb;
-    border-bottom: 1px solid #2563eb;
-    height: 4px;
-    width: 100%;
-}
-
-.pms-footer-copyright {
-    text-align: center;
-    font-size: 0.75rem;
-    color: #64748b;
-    padding-top: 5px;
-}
-
-@media (max-width: 992px) {
-    .pms-footer-wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
-    .pms-footer-title {
-        font-size: 1.6rem;
-    }
-    .pms-footer-address-col {
-        text-align: center;
-        flex: 1;
-    }
-}
     align-items: center;
     font-size: 0.8rem;
 }
