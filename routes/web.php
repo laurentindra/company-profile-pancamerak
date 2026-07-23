@@ -19,6 +19,7 @@ Route::get('/contact', [CompanyProfileController::class, 'contact'])->name('cont
 Route::post('/search-schedule', [CompanyProfileController::class, 'searchSchedule'])->name('search.schedule');
 
 // Admin Authentication Routes
+Route::get('/login', fn() => redirect()->route('admin.login'))->name('login');
 Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
 Route::post('/admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
