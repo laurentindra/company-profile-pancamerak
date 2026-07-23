@@ -199,29 +199,29 @@ img {
     border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
-/* Official Kop Surat Header */
+/* Official Kop Surat Header (Ultra Compact) */
 .official-pms-header {
     background-color: #ffffff;
     border-bottom: 1px solid #e2e8f0;
 }
 
 .pms-letterhead-banner {
-    padding: 12px 0 4px;
+    padding: 6px 0 2px;
 }
 
 .pms-letterhead-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .pms-logo-col {
-    flex: 0 0 95px;
+    flex: 0 0 70px;
 }
 
 .pms-header-logo {
-    width: 85px;
+    width: 60px;
     height: auto;
     object-fit: contain;
 }
@@ -235,30 +235,30 @@ img {
     display: block;
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: 0.75rem;
     color: #2563eb; /* Blue subtitle */
-    letter-spacing: 1.5px;
-    margin-bottom: 2px;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
     text-transform: uppercase;
 }
 
 .pms-header-title {
     font-family: var(--font-heading);
     font-weight: 900;
-    font-size: 1.6rem;
+    font-size: 1.15rem;
     color: #f87171; /* Coral Red title */
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     margin: 0;
     text-transform: uppercase;
-    line-height: 1.15;
+    line-height: 1.1;
 }
 
 .pms-address-col {
-    flex: 0 0 280px;
+    flex: 0 0 240px;
     text-align: right;
-    font-size: 0.68rem;
+    font-size: 0.58rem;
     color: #1e40af;
-    line-height: 1.25;
+    line-height: 1.15;
     font-style: italic;
 }
 
@@ -266,7 +266,7 @@ img {
     font-weight: 700;
     font-style: normal;
     display: block;
-    font-size: 0.72rem;
+    font-size: 0.62rem;
     color: #1e3a8a;
 }
 
@@ -275,12 +275,12 @@ img {
 }
 
 .pms-double-line {
-    border-top: 2px solid #2563eb;
+    border-top: 1.5px solid #2563eb;
     border-bottom: 1px solid #2563eb;
-    height: 3px;
+    height: 2px;
     width: 100%;
-    margin-top: 8px;
-    margin-bottom: 2px;
+    margin-top: 4px;
+    margin-bottom: 1px;
 }
 
 /* Header Navigation Bar (Sticky with Hamburger Toggle) */
@@ -289,8 +289,8 @@ img {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 8px 0;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    padding: 5px 0;
+    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.2);
 }
 
 .nav-bar-container {
@@ -305,8 +305,8 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 26px;
-    height: 18px;
+    width: 22px;
+    height: 15px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -316,14 +316,14 @@ img {
 
 .nav-toggle span {
     background-color: #ffffff;
-    height: 3px;
+    height: 2px;
     width: 100%;
-    border-radius: 3px;
+    border-radius: 2px;
     transition: all 0.3s ease-in-out;
 }
 
 .nav-toggle.active span:nth-child(1) {
-    transform: translateY(7.5px) rotate(45deg);
+    transform: translateY(6.5px) rotate(45deg);
 }
 
 .nav-toggle.active span:nth-child(2) {
@@ -331,7 +331,7 @@ img {
 }
 
 .nav-toggle.active span:nth-child(3) {
-    transform: translateY(-7.5px) rotate(-45deg);
+    transform: translateY(-6.5px) rotate(-45deg);
 }
 
 /* Dropdown Menu Overlay */
