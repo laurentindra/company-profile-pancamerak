@@ -35,6 +35,15 @@ class Ship extends Model
         return array_values(array_filter(array_map('trim', explode(',', $this->image_path))));
     }
 
+    /**
+     * Get first image path for thumbnails
+     */
+    public function getFirstImageAttribute(): ?string
+    {
+        $images = $this->images;
+        return count($images) > 0 ? $images[0] : $this->image_path;
+    }
+
     public function schedules()
     {
         return $this->hasMany(Schedule::class);

@@ -83,9 +83,11 @@
 
         <div class="form-group">
             <label for="image" class="form-label">Foto Kapal Baru (Biarkan kosong jika tidak diganti)</label>
-            @if($ship->image_path)
-                <div style="margin-bottom: 10px;">
-                    <img src="{{ asset($ship->image_path) }}" alt="{{ $ship->name }}" style="max-height: 100px; border-radius: 8px; border: 1px solid var(--admin-card-border);">
+            @if(count($ship->images) > 0)
+                <div style="margin-bottom: 10px; display: flex; gap: 10px; flex-wrap: wrap;">
+                    @foreach($ship->images as $img)
+                        <img src="{{ asset($img) }}" alt="{{ $ship->name }}" style="max-height: 90px; border-radius: 8px; border: 1px solid var(--admin-card-border); object-fit: cover;">
+                    @endforeach
                 </div>
             @endif
             <input type="file" name="image" id="image" class="form-control" accept="image/*">

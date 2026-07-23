@@ -189,8 +189,8 @@
             @foreach($featuredShips as $ship)
                 <div class="fleet-card" data-category="passenger">
                     <div class="fleet-img-container">
-                        @if($ship->image_path && file_exists(public_path($ship->image_path)))
-                            <img src="{{ asset($ship->image_path) }}" alt="{{ $ship->name }}" class="fleet-img" style="width: 100%; height: 200px; object-fit: cover;">
+                        @if($ship->first_image && file_exists(public_path($ship->first_image)))
+                            <img src="{{ asset($ship->first_image) }}" alt="{{ $ship->name }}" class="fleet-img" style="width: 100%; height: 200px; object-fit: cover;">
                         @else
                             <div class="fleet-placeholder passenger-bg">
                                 <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor"><path d="M19.4 11.2a16 16 0 0 0-14.8 0L2 13v3c0 .6.4 1 1 1h18c.6 0 1-.4 1-1v-3l-2.6-1.8zM12 2v10M12 2L8 6M12 2l4 4"/></svg>

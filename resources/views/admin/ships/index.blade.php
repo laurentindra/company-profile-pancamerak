@@ -80,8 +80,8 @@
                 @forelse($ships as $ship)
                     <tr>
                         <td>
-                            @if($ship->image_path)
-                                <img src="{{ asset($ship->image_path) }}" alt="{{ $ship->name }}" class="ship-img-thumb">
+                            @if($ship->first_image && file_exists(public_path($ship->first_image)))
+                                <img src="{{ asset($ship->first_image) }}" alt="{{ $ship->name }}" class="ship-img-thumb">
                             @else
                                 <div class="ship-img-thumb" style="background: #f1f5f9; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 0.7rem;">No Image</div>
                             @endif
