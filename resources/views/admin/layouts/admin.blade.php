@@ -557,6 +557,13 @@
                     Jadwal & Tarif
                 </a>
             </li>
+
+            <li class="sidebar-item {{ Route::is('admin.news.*') ? 'active' : '' }}">
+                <a href="{{ route('admin.news.index') }}">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l4 4v10a2 2 0 01-2 2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 2v6h6M8 13h8M8 17h8M8 9h2"></path></svg>
+                    Berita & Artikel
+                </a>
+            </li>
         </ul>
 
         <div class="sidebar-footer">

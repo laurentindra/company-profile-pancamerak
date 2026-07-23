@@ -8,6 +8,7 @@ use Illuminate\Database\Seeder;
 
 use App\Models\Ship;
 use App\Models\Schedule;
+use App\Models\News;
 
 class DatabaseSeeder extends Seeder
 {
@@ -313,6 +314,31 @@ class DatabaseSeeder extends Seeder
             'price_vip' => 672000,
             'price_economy' => 637000,
             'price_vehicle' => 5200000
+        ]);
+
+        // 3. SEED NEWS ARTICLES
+        News::create([
+            'title' => 'PMS Siap Hadapi Tantangan Distribusi Batubara Semester II',
+            'category' => 'KORPORASI',
+            'published_date' => '2026-07-12',
+            'summary' => 'PT PANCA MERAK SAMUDERA mengoptimalkan jadwal pemeliharaan berkala BKI (Biro Klasifikasi Indonesia) bagi armada Tugboat Hector guna mengantisipasi puncak permintaan kargo batubara.',
+            'content' => 'PT PANCA MERAK SAMUDERA mengoptimalkan jadwal pemeliharaan berkala BKI (Biro Klasifikasi Indonesia) bagi armada Tugboat Hector guna mengantisipasi puncak permintaan kargo batubara di pertengahan hingga akhir tahun. Seluruh armada dalam kondisi siap layar penuh.'
+        ]);
+
+        News::create([
+            'title' => 'Audit ISM Code Penumpang: Cattleya Express Raih Predikat Sangat Baik',
+            'category' => 'KESELAMATAN',
+            'published_date' => '2026-06-29',
+            'summary' => 'Audit keselamatan tahunan untuk sistem keselamatan operasional kapal penumpang Cattleya Express menyatakan kepatuhan 100% terhadap protokol mitigasi evakuasi darurat laut.',
+            'content' => 'Audit keselamatan tahunan untuk sistem keselamatan operasional kapal penumpang Cattleya Express menyatakan kepatuhan 100% terhadap protokol mitigasi evakuasi darurat laut. Komitmen keselamatan pelayaran senantiasa menjadi prioritas utama perusahaan.'
+        ]);
+
+        News::create([
+            'title' => 'PMS Rampungkan Konstruksi Perbaikan Tongkang Charles 205',
+            'category' => 'LOGISTIK',
+            'published_date' => '2026-05-15',
+            'summary' => 'Perbaikan deck pelat baja tongkang Charles 205 selesai dilakukan di galangan kapal Surabaya, siap memperkuat kegiatan angkutan batubara korporasi pertambangan per Juni ini.',
+            'content' => 'Perbaikan deck pelat baja tongkang Charles 205 selesai dilakukan di galangan kapal Surabaya, siap memperkuat kegiatan angkutan batubara korporasi pertambangan per Juni ini dengan kapasitas penuh 300 Feet.'
         ]);
     }
 }

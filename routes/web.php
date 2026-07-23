@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\AdminShipController;
 use App\Http\Controllers\Admin\AdminScheduleController;
+use App\Http\Controllers\Admin\NewsController;
 
 // Public Web Routes
 Route::get('/', [CompanyProfileController::class, 'home'])->name('home');
@@ -33,4 +34,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     
     // Schedules CRUD Management
     Route::resource('schedules', AdminScheduleController::class);
+
+    // News CRUD Management
+    Route::resource('news', NewsController::class);
 });

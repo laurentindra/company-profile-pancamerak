@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Ship;
 use App\Models\Schedule;
+use App\Models\News;
 use Carbon\Carbon;
 
 class CompanyProfileController extends Controller
@@ -14,11 +15,12 @@ class CompanyProfileController extends Controller
     {
         $featuredShips = Ship::where('type', 'passenger')->take(3)->get();
         
-   
         $origins = Schedule::select('origin_port')->distinct()->pluck('origin_port');
         $destinations = Schedule::select('destination_port')->distinct()->pluck('destination_port');
         
-        return view('home', compact('featuredShips', 'origins', 'destinations'));
+        $newsList = News::orderBy('published_date', 'desc')->orderBy('id', 'desc')->take(3)->get();
+
+        return view('home', compact('featuredShips', 'origins', 'destinations', 'newsList'));
     }
 
     public function about()

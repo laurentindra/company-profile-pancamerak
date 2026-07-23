@@ -226,42 +226,28 @@
             <p class="section-desc">Ikuti perkembangan terbaru mengenai operasional armada, rute baru, dan kebijakan keselamatan pelayaran kami.</p>
         </div>
         
-        <div class="news-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px;">
-            <div class="news-card" style="background-color: var(--bg-light); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column;">
-                <div style="height: 180px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); display: flex; align-items: center; justify-content: center; color: #ffffff;">
-                    <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <div class="news-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
+            @forelse($newsList as $item)
+                <div class="news-card" style="background-color: var(--bg-light); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="height: 180px; background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%); display: flex; align-items: center; justify-content: center; color: #ffffff; overflow: hidden; position: relative;">
+                        @if($item->image_path && file_exists(public_path($item->image_path)))
+                            <img src="{{ asset($item->image_path) }}" alt="{{ $item->title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                        @else
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l4 4v10a2 2 0 0 1-2 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        @endif
+                    </div>
+                    <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+                        <span style="font-size: 0.75rem; color: #2563eb; font-weight: 700; margin-bottom: 8px;">
+                            {{ $item->category }} | {{ $item->published_date ? \Carbon\Carbon::parse($item->published_date)->format('d M Y') : '' }}
+                        </span>
+                        <h3 style="font-size: 1.1rem; color: var(--primary-navy); margin-bottom: 12px; line-height: 1.4;">{{ $item->title }}</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-light-muted); margin-bottom: 16px; flex-grow: 1; line-height: 1.5;">{{ Str::limit($item->summary, 120) }}</p>
+                        <a href="javascript:void(0)" class="news-link-btn" style="color: #2563eb; font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; gap: 6px;" onclick="alert('{{ addslashes($item->content) }}')">Baca Selengkapnya &rarr;</a>
+                    </div>
                 </div>
-                <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
-                    <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 8px;">KORPORASI | 12 Juli 2026</span>
-                    <h3 style="font-size: 1.1rem; color: var(--primary-navy); margin-bottom: 12px; line-height: 1.4;">PMS Siap Hadapi Tantangan Distribusi Batubara Semester II</h3>
-                    <p style="font-size: 0.85rem; color: var(--text-light-muted); margin-bottom: 16px; flex-grow: 1;">PT PANCA MERAK SAMUDERA mengoptimalkan jadwal pemeliharaan berkala BKI (Biro Klasifikasi Indonesia) bagi armada Tugboat Hector guna mengantisipasi puncak permintaan kargo batubara...</p>
-                    <a href="#" class="news-link-btn" style="color: var(--accent-cyan); font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; gap: 6px;" onclick="alert('Detail berita akan dimuat pada halaman artikel resmi.')">Baca Selengkapnya &rarr;</a>
-                </div>
-            </div>
-            
-            <div class="news-card" style="background-color: var(--bg-light); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column;">
-                <div style="height: 180px; background: linear-gradient(135deg, #60a5fa 0%, #1d4ed8 100%); display: flex; align-items: center; justify-content: center; color: #ffffff;">
-                    <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
-                    <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 8px;">KESELAMATAN | 29 Juni 2026</span>
-                    <h3 style="font-size: 1.1rem; color: var(--primary-navy); margin-bottom: 12px; line-height: 1.4;">Audit ISM Code Penumpang: Cattleya Express Raih Predikat Sangat Baik</h3>
-                    <p style="font-size: 0.85rem; color: var(--text-light-muted); margin-bottom: 16px; flex-grow: 1;">Audit keselamatan tahunan untuk sistem keselamatan operasional kapal penumpang Cattleya Express menyatakan kepatuhan 100% terhadap protokol mitigasi evakuasi darurat laut...</p>
-                    <a href="#" class="news-link-btn" style="color: var(--accent-cyan); font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; gap: 6px;" onclick="alert('Detail berita akan dimuat pada halaman artikel resmi.')">Baca Selengkapnya &rarr;</a>
-                </div>
-            </div>
-            
-            <div class="news-card" style="background-color: var(--bg-light); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column;">
-                <div style="height: 180px; background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); display: flex; align-items: center; justify-content: center; color: #ffffff;">
-                    <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-                </div>
-                <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
-                    <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 8px;">LOGISTIK | 15 Mei 2026</span>
-                    <h3 style="font-size: 1.1rem; color: var(--primary-navy); margin-bottom: 12px; line-height: 1.4;">PMS Rampungkan Konstruksi Perbaikan Tongkang Charles 205</h3>
-                    <p style="font-size: 0.85rem; color: var(--text-light-muted); margin-bottom: 16px; flex-grow: 1;">Perbaikan deck pelat baja tongkang Charles 205 selesai dilakukan di galangan kapal Surabaya, siap memperkuat kegiatan angkutan batubara korporasi pertambangan per Juni ini...</p>
-                    <a href="#" class="news-link-btn" style="color: var(--accent-cyan); font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; gap: 6px;" onclick="alert('Detail berita akan dimuat pada halaman artikel resmi.')">Baca Selengkapnya &rarr;</a>
-                </div>
-            </div>
+            @empty
+                <div style="grid-column: 1 / -1; text-align: center; color: var(--text-light-muted); padding: 40px 0;">Belum ada berita korporasi yang diterbitkan.</div>
+            @endforelse
         </div>
     </div>
 </section>
