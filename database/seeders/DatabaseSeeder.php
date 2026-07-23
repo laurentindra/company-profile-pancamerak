@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
         );
 
         // 1. SEED SHIPS
+        // A. Passenger Ships
         $cattleya = Ship::create([
             'name' => 'KM. Cattleya Express',
             'type' => 'passenger',
@@ -67,63 +68,98 @@ class DatabaseSeeder extends Seeder
             'image_path' => 'images/ships/pantokrator.png'
         ]);
 
-        // Coal Barges
-        $b1 = Ship::create([
+        // B. Coal Barges (Tongkang Batu Bara)
+        // Charles Class - 300 Feet
+        Ship::create([
             'name' => 'Barge Charles 205',
             'type' => 'barge',
             'capacity' => '300 Feet',
             'gt' => 3233,
             'nt' => 970,
             'dimensions' => '87,84 x 24,40 x 5,50 m',
-            'description' => 'Tongkang batu bara 300 kaki yang dibeli pada Oktober 2010. Digunakan untuk mendistribusikan hasil pertambangan batu bara di Kalimantan dan sekitarnya.',
+            'description' => 'Tongkang batu bara ukuran 300 Feet milik PT PANCA MERAK SAMUDERA untuk angkutan tambang curah.',
             'image_path' => 'images/ships/barge_charles_205.png'
         ]);
 
-        $b2 = Ship::create([
+        Ship::create([
             'name' => 'Barge Charles 207',
             'type' => 'barge',
             'capacity' => '300 Feet',
             'gt' => 3233,
             'nt' => 970,
             'dimensions' => '87,84 x 24,40 x 5,50 m',
-            'description' => 'Tongkang batu bara 300 kaki yang dibeli pada 30 Oktober 2010. Ditarik oleh Tugboat Hector 111.',
+            'description' => 'Tongkang batu bara ukuran 300 Feet milik PT PANCA MERAK SAMUDERA. Ditarik oleh Tugboat Hector 111.',
             'image_path' => 'images/ships/barge_charles_207.png'
         ]);
 
-        $b3 = Ship::create([
-            'name' => 'Barge Charles 208',
+        Ship::create([
+            'name' => 'Barge Charles 209',
             'type' => 'barge',
             'capacity' => '300 Feet',
             'gt' => 3233,
             'nt' => 970,
             'dimensions' => '87,84 x 24,40 x 5,50 m',
-            'description' => 'Tongkang batu bara 300 kaki yang dibeli pada 30 Oktober 2010. Ditarik oleh Tugboat Hector 101 atau Hector 102.',
-            'image_path' => 'images/ships/barge.jpg'
+            'description' => 'Tongkang batu bara ukuran 300 Feet milik PT PANCA MERAK SAMUDERA. Ditarik oleh Tugboat Hector 777.',
+            'image_path' => 'images/ships/barge_charles_205.png'
         ]);
 
-        $b4 = Ship::create([
-            'name' => 'Barge PMS 206',
+        Ship::create([
+            'name' => 'Barge Charles 210',
             'type' => 'barge',
             'capacity' => '300 Feet',
-            'gt' => 3200,
-            'nt' => 960,
+            'gt' => 3233,
+            'nt' => 970,
             'dimensions' => '87,84 x 24,40 x 5,50 m',
-            'description' => 'Bagian dari ekspansi armada tongkang milik PT PANCA MERAK SAMUDERA untuk logistik batu bara.',
+            'description' => 'Tongkang batu bara ukuran 300 Feet milik PT PANCA MERAK SAMUDERA untuk logistik tambang laut.',
+            'image_path' => 'images/ships/barge_charles_207.png'
+        ]);
+
+        // PMS Class - 270 Feet
+        Ship::create([
+            'name' => 'Barge PMS 201',
+            'type' => 'barge',
+            'capacity' => '270 Feet',
+            'gt' => 2400,
+            'nt' => 720,
+            'dimensions' => '82,30 x 21,34 x 4,88 m',
+            'description' => 'Tongkang batu bara ukuran 270 Feet milik PT PANCA MERAK SAMUDERA untuk distribusi kargo laut.',
             'image_path' => 'images/ships/barge_pms_206.jpeg'
         ]);
 
-        // Tugboats
         Ship::create([
-            'name' => 'Tugboat Hector 101',
-            'type' => 'tugboat',
-            'gt' => 218,
-            'nt' => 66,
-            'dimensions' => '26,53 x 8,00 x 3,65 m',
-            'engine' => '2 x 823 HP',
-            'description' => 'Dioperasikan sejak tahun 2010 untuk menarik tongkang Charles 208 dalam pengiriman batu bara pertambangan.',
-            'image_path' => 'images/ships/tugboat_hector_101.png'
+            'name' => 'Barge PMS 202',
+            'type' => 'barge',
+            'capacity' => '270 Feet',
+            'gt' => 2400,
+            'nt' => 720,
+            'dimensions' => '82,30 x 21,34 x 4,88 m',
+            'description' => 'Tongkang batu bara ukuran 270 Feet milik PT PANCA MERAK SAMUDERA untuk logistik laut.',
+            'image_path' => 'images/ships/barge_pms_206.jpeg'
         ]);
 
+        Ship::create([
+            'name' => 'Barge PMS 203',
+            'type' => 'barge',
+            'capacity' => '270 Feet',
+            'gt' => 2400,
+            'nt' => 720,
+            'dimensions' => '82,30 x 21,34 x 4,88 m',
+            'description' => 'Tongkang batu bara ukuran 270 Feet milik PT PANCA MERAK SAMUDERA. Ditarik oleh Tugboat Hector 103.',
+            'image_path' => 'images/ships/barge_pms_206.jpeg'
+        ]);
+
+        Ship::create([
+            'name' => 'Barge PMS 206',
+            'type' => 'barge',
+            'capacity' => '270 Feet',
+            'gt' => 2400,
+            'nt' => 720,
+            'dimensions' => '82,30 x 21,34 x 4,88 m',
+            'description' => 'Tongkang batu bara ukuran 270 Feet bagian dari ekspansi armada logistik PT PANCA MERAK SAMUDERA.',
+            'image_path' => 'images/ships/barge_pms_206.jpeg'
+        ]);
+
+        // C. Tugboats (Kapal Tunda Hector)
         Ship::create([
             'name' => 'Tugboat Hector 102',
             'type' => 'tugboat',
@@ -131,7 +167,7 @@ class DatabaseSeeder extends Seeder
             'nt' => 59,
             'dimensions' => '26,53 x 8,00 x 3,65 m',
             'engine' => '2 x 823 HP',
-            'description' => 'Kapal tunda tahun 2010 yang berfungsi menarik tongkang Charles 208 dengan kekuatan mesin ganda 823 HP.',
+            'description' => 'Kapal tunda (TB H 102) bermesin ganda 823 HP milik PT PANCA MERAK SAMUDERA.',
             'image_path' => 'images/ships/tugboat_hector_102.png'
         ]);
 
@@ -142,7 +178,7 @@ class DatabaseSeeder extends Seeder
             'nt' => 55,
             'dimensions' => '26,53 x 8,00 x 3,60 m',
             'engine' => '2 x 823 HP',
-            'description' => 'Kapal tunda tahun 2010 yang dikhususkan menarik tongkang PMS 203.',
+            'description' => 'Kapal tunda (TB H 103) bermesin ganda 823 HP, dikhususkan menarik tongkang PMS 203.',
             'image_path' => 'images/ships/tugboat_hector_103.jpeg'
         ]);
 
@@ -153,30 +189,8 @@ class DatabaseSeeder extends Seeder
             'nt' => 60,
             'dimensions' => '24,64 x 8,00 x 3,70 m',
             'engine' => '2 x 820 HP',
-            'description' => 'Ditambahkan pada tahun 2011, bertugas menarik tongkang Marine Bay 303 untuk logistik batu bara.',
+            'description' => 'Kapal tunda (TB H 106) bermesin ganda 820 HP bertugas menarik tongkang logistik batu bara.',
             'image_path' => 'images/ships/tugboat_hector_106.png'
-        ]);
-
-        Ship::create([
-            'name' => 'Tugboat Hector 108',
-            'type' => 'tugboat',
-            'gt' => 198,
-            'nt' => 60,
-            'dimensions' => '26,48 x 8,00 x 3,60 m',
-            'engine' => '2 x 610 HP',
-            'description' => 'Kapal tunda tahun 2011 dengan mesin 2x 610 HP yang berfungsi menarik tongkang Charles 210.',
-            'image_path' => 'images/ships/tugboat_hector_108.png'
-        ]);
-
-        Ship::create([
-            'name' => 'Tugboat Hector 777',
-            'type' => 'tugboat',
-            'gt' => 166,
-            'nt' => 62,
-            'dimensions' => '24,82 x 7,65 x 4,05 m',
-            'engine' => '2 x 820 HP',
-            'description' => 'Kapal tunda Hector 777, bertugas menarik tongkang Charles 209 dalam logistik laut.',
-            'image_path' => 'images/ships/tugboat_hector_777.jpeg'
         ]);
 
         Ship::create([
@@ -186,41 +200,30 @@ class DatabaseSeeder extends Seeder
             'nt' => 64,
             'dimensions' => '25,51 x 8,00 x 3,65 m',
             'engine' => '2 x 820 HP',
-            'description' => 'Kapal tunda Hector 111, bertugas menarik tongkang Charles 207 secara reguler.',
+            'description' => 'Kapal tunda (TB H 111) bermesin ganda 820 HP bertugas menarik tongkang Charles 207.',
             'image_path' => 'images/ships/tugboat_hector_111.png'
         ]);
 
         Ship::create([
-            'name' => 'Tugboat Hector 117',
+            'name' => 'Tugboat Hector 777',
             'type' => 'tugboat',
-            'gt' => 206,
+            'gt' => 166,
             'nt' => 62,
-            'dimensions' => '24,10 x 8,00 x 3,00 m',
-            'engine' => '2 x 826 HP',
-            'description' => 'Tugboat kelas berat yang ditenagai mesin ganda 826 HP untuk menarik tongkang Charles 209.',
-            'image_path' => 'images/ships/tugboat_hector_117.jpeg'
+            'dimensions' => '24,82 x 7,65 x 4,05 m',
+            'engine' => '2 x 820 HP',
+            'description' => 'Kapal tunda (TB H 777) bertugas menarik tongkang Charles 209 dalam logistik laut.',
+            'image_path' => 'images/ships/tugboat_hector_777.jpeg'
         ]);
 
         Ship::create([
-            'name' => 'Tugboat Hector 115',
+            'name' => 'Tugboat Hector 888',
             'type' => 'tugboat',
-            'gt' => 210,
-            'nt' => 63,
-            'dimensions' => '25,50 x 8,00 x 3,60 m',
-            'engine' => '2 x 750 HP',
-            'description' => 'Selesai dibangun Juni 2013. Berfungsi menarik tongkang yang bermuatan batu bara dan bijih besi.',
-            'image_path' => 'images/ships/tugboat_hector_115.png'
-        ]);
-
-        Ship::create([
-            'name' => 'Tugboat Hector 116',
-            'type' => 'tugboat',
-            'gt' => 210,
-            'nt' => 63,
-            'dimensions' => '25,50 x 8,00 x 3,60 m',
-            'engine' => '2 x 750 HP',
-            'description' => 'Selesai dibangun Juli 2013 untuk mendampingi armada logistik angkutan bijih tambang.',
-            'image_path' => 'images/ships/tugboat.jpg'
+            'gt' => 215,
+            'nt' => 65,
+            'dimensions' => '25,50 x 8,00 x 3,65 m',
+            'engine' => '2 x 850 HP',
+            'description' => 'Kapal tunda (TB H 888) bermesin ganda 850 HP untuk operasional penarikan tongkang.',
+            'image_path' => 'images/ships/tugboat_hector_178.jpg'
         ]);
 
         Ship::create([
@@ -230,7 +233,7 @@ class DatabaseSeeder extends Seeder
             'nt' => 66,
             'dimensions' => '26,00 x 8,00 x 3,70 m',
             'engine' => '2 x 850 HP',
-            'description' => 'Armada kapal tunda terbaru yang dioperasikan pada Maret 2014, siap untuk menarik tongkang berukuran 300 hingga 330 kaki.',
+            'description' => 'Kapal tunda (TB H 178) ditenagai mesin ganda 850 HP untuk menarik tongkang 300 Feet.',
             'image_path' => 'images/ships/tugboat_hector_178.jpg'
         ]);
 
