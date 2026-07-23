@@ -13,14 +13,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
     
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --bg-color: #060e18;
-            --card-bg: #0d1b2a;
-            --accent-color: #00d2ff;
-            --text-color: #f1f5f9;
-            --muted-color: #94a3b8;
-            --border-color: rgba(255, 255, 255, 0.08);
+            --bg-color: #0f172a;
+            --card-bg: #ffffff;
+            --primary-color: #1e40af;
+            --primary-hover: #1e3a8a;
+            --text-color: #0f172a;
+            --muted-color: #64748b;
+            --border-color: #e2e8f0;
         }
 
         * {
@@ -30,7 +33,7 @@
         }
 
         body {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background: var(--bg-color);
             color: var(--text-color);
             min-height: 100vh;
@@ -38,104 +41,101 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
-            background-image: 
-                radial-gradient(circle at 15% 15%, rgba(0, 210, 255, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 85% 85%, rgba(0, 102, 255, 0.08) 0%, transparent 40%);
+            -webkit-font-smoothing: antialiased;
         }
 
         .login-card {
             background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 40px;
+            border-radius: 12px;
+            padding: 36px 32px;
             width: 100%;
-            max-width: 440px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
+            max-width: 400px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
         }
 
         .brand-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 28px;
         }
 
         .brand-header img {
-            height: 54px;
-            margin-bottom: 16px;
+            height: 48px;
+            margin-bottom: 12px;
         }
 
         .brand-header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.25rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.15rem;
             font-weight: 800;
-            color: #ffffff;
-            letter-spacing: 0.5px;
+            color: #0f172a;
+            letter-spacing: 0.3px;
         }
 
         .brand-header p {
-            font-size: 0.82rem;
-            color: var(--accent-color);
+            font-size: 0.78rem;
+            color: #64748b;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             font-weight: 600;
-            margin-top: 4px;
+            margin-top: 2px;
         }
 
         .alert {
-            padding: 12px 16px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            font-size: 0.85rem;
+            padding: 10px 14px;
+            border-radius: 6px;
+            margin-bottom: 18px;
+            font-size: 0.82rem;
+            font-weight: 500;
         }
 
         .alert-danger {
-            background: rgba(239, 68, 68, 0.15);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            color: #f87171;
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #991b1b;
         }
 
         .alert-success {
-            background: rgba(16, 185, 129, 0.15);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            color: #34d399;
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            color: #065f46;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .form-label {
             display: block;
-            margin-bottom: 8px;
-            font-size: 0.85rem;
+            margin-bottom: 6px;
+            font-size: 0.82rem;
             font-weight: 600;
-            color: #cbd5e1;
+            color: #334155;
         }
 
         .form-control {
             width: 100%;
-            padding: 14px 18px;
-            background: rgba(6, 14, 24, 0.9);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            color: white;
+            padding: 10px 14px;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            color: #0f172a;
             font-family: inherit;
-            font-size: 0.95rem;
-            transition: all 0.25s ease;
+            font-size: 0.9rem;
+            transition: all 0.15s ease;
         }
 
         .form-control:focus {
             outline: none;
-            border-color: var(--accent-color);
-            box-shadow: 0 0 0 3px rgba(0, 210, 255, 0.15);
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
 
         .form-options {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 24px;
-            font-size: 0.85rem;
+            margin-bottom: 22px;
+            font-size: 0.83rem;
         }
 
         .checkbox-container {
@@ -143,39 +143,42 @@
             align-items: center;
             gap: 8px;
             cursor: pointer;
-            color: var(--muted-color);
+            color: #475569;
+            font-weight: 500;
         }
 
         .btn-submit {
             width: 100%;
-            padding: 14px;
-            border-radius: 10px;
+            padding: 12px;
+            border-radius: 6px;
             border: none;
-            background: linear-gradient(135deg, var(--accent-color), #0066ff);
-            color: #051322;
-            font-size: 0.95rem;
+            background: var(--primary-color);
+            color: #ffffff;
+            font-size: 0.9rem;
             font-weight: 700;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             cursor: pointer;
-            transition: all 0.25s ease;
+            transition: all 0.15s ease;
         }
 
         .btn-submit:hover {
-            opacity: 0.95;
-            transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(0, 210, 255, 0.35);
+            background: var(--primary-hover);
         }
 
         .footer-note {
             text-align: center;
-            margin-top: 24px;
-            font-size: 0.78rem;
-            color: var(--muted-color);
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #64748b;
         }
 
         .footer-note a {
-            color: var(--accent-color);
+            color: #2563eb;
             text-decoration: none;
+            font-weight: 600;
+        }
+        .footer-note a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>

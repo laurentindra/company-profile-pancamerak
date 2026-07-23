@@ -7,30 +7,26 @@
 <style>
     .stats-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 20px;
-        margin-bottom: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin-bottom: 24px;
     }
 
     .stat-card {
         background: var(--admin-card);
         border: 1px solid var(--admin-card-border);
-        border-radius: 14px;
-        padding: 20px;
+        border-radius: 10px;
+        padding: 18px;
         display: flex;
         align-items: center;
-        gap: 16px;
-        transition: transform 0.2s;
-    }
-
-    .stat-card:hover {
-        transform: translateY(-2px);
+        gap: 14px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     }
 
     .stat-icon {
-        width: 52px;
-        height: 52px;
-        border-radius: 12px;
+        width: 46px;
+        height: 46px;
+        border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -38,51 +34,51 @@
     }
 
     .stat-icon.accent {
-        background: rgba(0, 210, 255, 0.15);
-        color: var(--admin-accent);
+        background: #eff6ff;
+        color: #1d4ed8;
     }
 
     .stat-icon.gold {
-        background: rgba(255, 183, 3, 0.15);
-        color: var(--admin-gold);
+        background: #fffbebf;
+        color: #b45309;
     }
 
     .stat-icon.purple {
-        background: rgba(168, 85, 247, 0.15);
-        color: #c084fc;
+        background: #faf5ff;
+        color: #7e22ce;
     }
 
     .stat-icon.success {
-        background: rgba(16, 185, 129, 0.15);
-        color: var(--admin-success);
+        background: #ecfdf5;
+        color: #047857;
     }
 
     .stat-info h3 {
-        font-size: 1.6rem;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 800;
-        color: white;
-        line-height: 1;
+        font-size: 1.5rem;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 700;
+        color: var(--admin-text-main);
+        line-height: 1.1;
     }
 
     .stat-info p {
-        font-size: 0.8rem;
-        color: var(--admin-muted);
-        margin-top: 6px;
+        font-size: 0.78rem;
+        color: var(--admin-text-muted);
+        margin-top: 4px;
         font-weight: 500;
     }
 
     .quick-actions {
         display: flex;
         gap: 12px;
-        margin-bottom: 30px;
+        margin-bottom: 24px;
         flex-wrap: wrap;
     }
 
     .grid-two-col {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 24px;
+        gap: 20px;
     }
 
     @media (max-width: 992px) {
@@ -95,16 +91,16 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 18px;
+        margin-bottom: 16px;
         padding-bottom: 12px;
         border-bottom: 1px solid var(--admin-card-border);
     }
 
     .card-header h3 {
-        font-size: 1rem;
-        font-family: 'Montserrat', sans-serif;
+        font-size: 0.95rem;
+        font-family: 'Plus Jakarta Sans', sans-serif;
         font-weight: 700;
-        color: white;
+        color: var(--admin-text-main);
     }
 </style>
 

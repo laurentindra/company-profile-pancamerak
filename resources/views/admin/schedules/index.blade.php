@@ -29,9 +29,9 @@
     .days-pill {
         display: inline-block;
         padding: 3px 8px;
-        background: rgba(0, 210, 255, 0.1);
-        border: 1px solid rgba(0, 210, 255, 0.2);
-        color: var(--admin-accent);
+        background: #f1f5f9;
+        border: 1px solid #cbd5e1;
+        color: #334155;
         border-radius: 4px;
         font-size: 0.75rem;
         font-weight: 600;
@@ -91,17 +91,17 @@
                 @forelse($schedules as $schedule)
                     <tr>
                         <td>
-                            <strong style="color: white; font-size: 0.95rem;">{{ $schedule->ship->name ?? 'N/A' }}</strong>
+                            <strong style="color: var(--admin-text-main); font-size: 0.92rem;">{{ $schedule->ship->name ?? 'N/A' }}</strong>
                         </td>
                         <td>
-                            <div style="font-weight: 600; color: white;">
+                            <div style="font-weight: 600; color: var(--admin-text-main);">
                                 {{ $schedule->origin_port }} ➔ {{ $schedule->destination_port }}
                             </div>
                         </td>
                         <td>
                             <div style="font-size: 0.85rem;">
                                 <div><strong>Berangkat:</strong> {{ $schedule->departure_time }}</div>
-                                <div style="color: var(--admin-muted);"><strong>Tiba:</strong> {{ $schedule->arrival_time }}</div>
+                                <div style="color: var(--admin-text-muted);"><strong>Tiba:</strong> {{ $schedule->arrival_time }}</div>
                             </div>
                         </td>
                         <td>
@@ -109,10 +109,10 @@
                         </td>
                         <td>
                             <div class="price-list">
-                                <div class="price-item"><span style="color: var(--admin-gold);">VIP:</span> Rp {{ number_format($schedule->price_vip, 0, ',', '.') }}</div>
-                                <div class="price-item"><span style="color: var(--admin-accent);">Ekonomi:</span> Rp {{ number_format($schedule->price_economy, 0, ',', '.') }}</div>
+                                <div class="price-item"><span style="color: #b45309; font-weight: 600;">VIP:</span> Rp {{ number_format($schedule->price_vip, 0, ',', '.') }}</div>
+                                <div class="price-item"><span style="color: #1d4ed8; font-weight: 600;">Ekonomi:</span> Rp {{ number_format($schedule->price_economy, 0, ',', '.') }}</div>
                                 @if($schedule->price_vehicle)
-                                    <div class="price-item"><span style="color: #c084fc;">Kendaraan:</span> Rp {{ number_format($schedule->price_vehicle, 0, ',', '.') }}</div>
+                                    <div class="price-item"><span style="color: #7e22ce; font-weight: 600;">Kendaraan:</span> Rp {{ number_format($schedule->price_vehicle, 0, ',', '.') }}</div>
                                 @endif
                             </div>
                         </td>

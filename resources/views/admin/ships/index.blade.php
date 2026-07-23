@@ -83,11 +83,11 @@
                             @if($ship->image_path)
                                 <img src="{{ asset($ship->image_path) }}" alt="{{ $ship->name }}" class="ship-img-thumb">
                             @else
-                                <div class="ship-img-thumb" style="background: #1e293b; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 0.7rem;">No Image</div>
+                                <div class="ship-img-thumb" style="background: #f1f5f9; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 0.7rem;">No Image</div>
                             @endif
                         </td>
                         <td>
-                            <strong style="color: white; font-size: 0.95rem;">{{ $ship->name }}</strong>
+                            <strong style="color: var(--admin-text-main); font-size: 0.92rem;">{{ $ship->name }}</strong>
                         </td>
                         <td>
                             <span class="badge badge-{{ $ship->type }}">
