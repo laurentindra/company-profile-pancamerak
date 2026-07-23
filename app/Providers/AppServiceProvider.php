@@ -22,5 +22,7 @@ class AppServiceProvider extends ServiceProvider
         if (env('APP_ENV') === 'production' || isset($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
             \Illuminate\Support\Facades\URL::forceScheme('https');
         }
+
+        \Illuminate\Pagination\Paginator::useBootstrapFive();
     }
 }

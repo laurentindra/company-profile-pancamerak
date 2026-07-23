@@ -453,6 +453,62 @@
             gap: 16px;
         }
 
+        /* Clean Pagination Styling */
+        .pagination-wrapper {
+            margin-top: 24px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .pagination-wrapper .pagination {
+            display: flex;
+            list-style: none;
+            gap: 6px;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .pagination-wrapper .page-item .page-link {
+            padding: 8px 14px;
+            border-radius: 6px;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            color: #1e293b;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pagination-wrapper .page-item.active .page-link {
+            background: var(--admin-primary);
+            color: #ffffff;
+            border-color: var(--admin-primary);
+        }
+
+        .pagination-wrapper .page-item .page-link:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+
+        .pagination-wrapper .page-item.disabled .page-link {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: #f8fafc;
+        }
+
+        .pagination-wrapper svg {
+            width: 16px !important;
+            height: 16px !important;
+            max-width: 16px !important;
+            max-height: 16px !important;
+        }
+
         /* Footer */
         .admin-footer {
             padding: 16px 28px;
