@@ -29,41 +29,41 @@ class DatabaseSeeder extends Seeder
 
         // 1. SEED SHIPS
         $cattleya = Ship::create([
-            'name' => 'Cattleya Express',
+            'name' => 'KM. Cattleya Express',
             'type' => 'passenger',
-            'route' => 'Pare-Pare - Nunukan',
+            'route' => 'Parepare - Bontang',
             'capacity' => '1.400 Penumpang',
             'gt' => 2000,
             'nt' => 600,
             'dimensions' => '-',
             'engine' => '-',
-            'description' => 'Diakuisisi pada 29 Maret 2005. Kapal penumpang pertama milik PT PANCA MERAK SAMUDERA yang melayani rute Pare-Pare ke Nunukan. Kapal ini mampu membawa lebih dari 1.400 penumpang sekaligus.',
+            'description' => 'Diakuisisi pada 29 Maret 2005. Kapal penumpang pertama milik PT PANCA MERAK SAMUDERA yang melayani rute Parepare ke Bontang.',
             'image_path' => 'images/ships/cattleya_express.jpg'
         ]);
 
         $queenSoya = Ship::create([
-            'name' => 'MV Queen Soya',
+            'name' => 'KM. Queen Soya',
             'type' => 'passenger',
-            'route' => 'Pare-Pare - Samarinda',
+            'route' => 'Parepare - Samarinda',
             'capacity' => '1.500 Penumpang',
             'gt' => 3000,
             'nt' => 900,
             'dimensions' => '-',
             'engine' => '-',
-            'description' => 'Dibeli pada November 2007, merupakan kapal penumpang kedua dari PT PANCA MERAK SAMUDERA dengan rute Pare-Pare ke Samarinda. Kapal ini berkapasitas lebih dari 1.500 penumpang.',
+            'description' => 'Dibeli pada November 2007, merupakan kapal penumpang kedua dari PT PANCA MERAK SAMUDERA dengan rute Parepare ke Samarinda.',
             'image_path' => 'images/ships/queen_soya.jpg'
         ]);
 
         $pantokrator = Ship::create([
-            'name' => 'MV Pantokrator',
+            'name' => 'KM. Pantokrator',
             'type' => 'passenger',
-            'route' => 'Samarinda - Pare-Pare',
+            'route' => 'Parepare - Nunukan',
             'capacity' => '1.600 Penumpang',
             'gt' => 3500,
             'nt' => 1100,
             'dimensions' => '-',
             'engine' => '-',
-            'description' => 'Ditambahkan pada tahun 2013, merupakan armada kapal penumpang ketiga yang dimiliki oleh PT PANCA MERAK SAMUDERA dengan fokus rute pelayaran Samarinda ke Pare-Pare.',
+            'description' => 'Ditambahkan pada tahun 2013, merupakan armada kapal penumpang ketiga yang dimiliki oleh PT PANCA MERAK SAMUDERA dengan fokus rute Parepare ke Nunukan.',
             'image_path' => 'images/ships/pantokrator.png'
         ]);
 
@@ -237,79 +237,79 @@ class DatabaseSeeder extends Seeder
 
         // 2. SEED SCHEDULES FOR PASSENGER SHIPS
 
-        // Cattleya Express Schedules
+        // KM. Cattleya Express (Parepare <-> Bontang)
         Schedule::create([
             'ship_id' => $cattleya->id,
-            'origin_port' => 'Pare-Pare',
+            'origin_port' => 'Parepare',
+            'destination_port' => 'Bontang',
+            'departure_time' => '14:00 WITA',
+            'arrival_time' => '10:00 WITA (Besok)',
+            'days_of_week' => 'Rabu',
+            'price_vip' => 512000,
+            'price_economy' => 442000,
+            'price_vehicle' => 3400000
+        ]);
+
+        Schedule::create([
+            'ship_id' => $cattleya->id,
+            'origin_port' => 'Bontang',
+            'destination_port' => 'Parepare',
+            'departure_time' => '14:00 WITA',
+            'arrival_time' => '10:00 WITA (Besok)',
+            'days_of_week' => 'Jumat',
+            'price_vip' => 512000,
+            'price_economy' => 442000,
+            'price_vehicle' => 3400000
+        ]);
+
+        // KM. Queen Soya (Parepare <-> Samarinda)
+        Schedule::create([
+            'ship_id' => $queenSoya->id,
+            'origin_port' => 'Parepare',
+            'destination_port' => 'Samarinda',
+            'departure_time' => '14:00 WITA',
+            'arrival_time' => '08:00 WITA (Besok)',
+            'days_of_week' => 'Sabtu',
+            'price_vip' => 512000,
+            'price_economy' => 442000,
+            'price_vehicle' => 3400000
+        ]);
+
+        Schedule::create([
+            'ship_id' => $queenSoya->id,
+            'origin_port' => 'Samarinda',
+            'destination_port' => 'Parepare',
+            'departure_time' => '14:00 WITA',
+            'arrival_time' => '08:00 WITA (Besok)',
+            'days_of_week' => 'Rabu',
+            'price_vip' => 512000,
+            'price_economy' => 442000,
+            'price_vehicle' => 3400000
+        ]);
+
+        // KM. Pantokrator (Parepare <-> Nunukan)
+        Schedule::create([
+            'ship_id' => $pantokrator->id,
+            'origin_port' => 'Parepare',
             'destination_port' => 'Nunukan',
-            'departure_time' => '09:00 WITA',
-            'arrival_time' => '21:00 WITA',
-            'days_of_week' => 'Senin, Kamis',
-            'price_vip' => 450000,
-            'price_economy' => 300000,
-            'price_vehicle' => 1200000
+            'departure_time' => '10:00 WITA',
+            'arrival_time' => '22:00 WITA (Besok)',
+            'days_of_week' => 'Rabu',
+            'price_vip' => 672000,
+            'price_economy' => 637000,
+            'price_vehicle' => 5200000
         ]);
 
         Schedule::create([
-            'ship_id' => $cattleya->id,
+            'ship_id' => $pantokrator->id,
             'origin_port' => 'Nunukan',
-            'destination_port' => 'Pare-Pare',
-            'departure_time' => '09:00 WITA',
-            'arrival_time' => '21:00 WITA',
-            'days_of_week' => 'Rabu, Sabtu',
-            'price_vip' => 450000,
-            'price_economy' => 300000,
-            'price_vehicle' => 1200000
-        ]);
-
-        // MV Queen Soya Schedules
-        Schedule::create([
-            'ship_id' => $queenSoya->id,
-            'origin_port' => 'Pare-Pare',
-            'destination_port' => 'Samarinda',
-            'departure_time' => '14:00 WITA',
-            'arrival_time' => '08:00 WITA (Besok)',
-            'days_of_week' => 'Selasa, Jumat',
-            'price_vip' => 500000,
-            'price_economy' => 350000,
-            'price_vehicle' => 1500000
-        ]);
-
-        Schedule::create([
-            'ship_id' => $queenSoya->id,
-            'origin_port' => 'Samarinda',
-            'destination_port' => 'Pare-Pare',
-            'departure_time' => '14:00 WITA',
-            'arrival_time' => '08:00 WITA (Besok)',
-            'days_of_week' => 'Kamis, Minggu',
-            'price_vip' => 500000,
-            'price_economy' => 350000,
-            'price_vehicle' => 1500000
-        ]);
-
-        // MV Pantokrator Schedules
-        Schedule::create([
-            'ship_id' => $pantokrator->id,
-            'origin_port' => 'Samarinda',
-            'destination_port' => 'Pare-Pare',
+            'destination_port' => 'Parepare',
             'departure_time' => '10:00 WITA',
-            'arrival_time' => '04:00 WITA (Besok)',
-            'days_of_week' => 'Senin, Rabu, Sabtu',
-            'price_vip' => 550000,
-            'price_economy' => 380000,
-            'price_vehicle' => 1600000
-        ]);
-
-        Schedule::create([
-            'ship_id' => $pantokrator->id,
-            'origin_port' => 'Pare-Pare',
-            'destination_port' => 'Samarinda',
-            'departure_time' => '10:00 WITA',
-            'arrival_time' => '04:00 WITA (Besok)',
-            'days_of_week' => 'Selasa, Kamis, Minggu',
-            'price_vip' => 550000,
-            'price_economy' => 380000,
-            'price_vehicle' => 1600000
+            'arrival_time' => '22:00 WITA (Besok)',
+            'days_of_week' => 'Sabtu',
+            'price_vip' => 672000,
+            'price_economy' => 637000,
+            'price_vehicle' => 5200000
         ]);
     }
 }

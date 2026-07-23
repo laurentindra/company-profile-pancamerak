@@ -66,74 +66,220 @@
 <section class="tariffs-reference-section" style="padding: 80px 0; background-color: #ffffff; border-top: 1px solid var(--border-light);">
     <div class="container">
         <div class="section-header text-center">
-            <span class="sub-title">Tarif Referensi</span>
-            <h2>Daftar Harga Tiket & Tarif Angkutan</h2>
-            <p class="section-desc">Berikut adalah tabel tarif tiket kapal penumpang standar PT PANCA MERAK SAMUDERA untuk masing-masing rute.</p>
+            <span class="sub-title">Jadwal & Tarif Resmi Kantor</span>
+            <h2>Daftar Jadwal Kapal & Price List Resmi</h2>
+            <p class="section-desc">Informasi resmi jadwal pelayaran reguler dan tabel tarif tiket penumpang & kendaraan PT PANCA MERAK SAMUDERA.</p>
         </div>
-        
-        <div style="display: flex; flex-direction: column; gap: 40px; margin-top: 50px;">
+
+        <!-- Schedule Summary Cards -->
+        <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
             @foreach($passengerShips as $ship)
-                <div style="background-color: var(--bg-light); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm);">
-                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--accent-cyan); padding-bottom: 12px; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
-                        <h3 style="color: var(--primary-navy); margin-bottom: 0;">{{ $ship->name }}</h3>
-                        <span style="background-color: var(--primary-navy); color: #ffffff; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">Rute: {{ $ship->route }}</span>
+                <div style="background-color: var(--bg-light); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--primary-navy); padding-bottom: 12px; margin-bottom: 16px;">
+                        <h3 style="color: var(--primary-navy); margin: 0; font-size: 1.2rem;">{{ $ship->name }}</h3>
+                        <span style="background-color: var(--accent-cyan); color: #ffffff; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 700;">{{ $ship->route }}</span>
                     </div>
-                    
-                    <div class="table-responsive">
-                        <table class="legal-table" style="box-shadow: none; border-radius: 0;">
-                            <thead>
-                                <tr>
-                                    <th>Kategori Tiket / Kendaraan</th>
-                                    <th>Kelas Pelayanan</th>
-                                    <th>Simulasi Tarif Tiket (Rupiah)</th>
-                                    <th>Keterangan Fasilitas</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($ship->schedules as $sched)
-                                    <tr>
-                                        <td><strong>Penumpang Dewasa</strong></td>
-                                        <td>VIP (Kabin Ber-AC)</td>
-                                        <td style="font-weight: 700; color: var(--accent-orange);">Rp {{ number_format($sched->price_vip, 0, ',', '.') }}</td>
-                                        <td>Kasur busa, selimut, air mineral, TV bersama.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Penumpang Dewasa</strong></td>
-                                        <td>Ekonomi (Non-AC/Standard)</td>
-                                        <td style="font-weight: 700; color: var(--accent-orange);">Rp {{ number_format($sched->price_economy, 0, ',', '.') }}</td>
-                                        <td>Dek tidur luas, kamar mandi bersih, kantin dekat.</td>
-                                    </tr>
-                                    @if($sched->price_vehicle)
-                                        <tr>
-                                            <td><strong>Kendaraan Roda 2 (Motor)</strong></td>
-                                            <td>Ferry Angkutan Dek Bawah</td>
-                                            <td style="font-weight: 700; color: var(--accent-cyan);">Rp {{ number_format($sched->price_vehicle * 0.2, 0, ',', '.') }}</td>
-                                            <td>Termasuk lashing keamanan rantai motor selama berlayar.</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Kendaraan Roda 4 (Mobil)</strong></td>
-                                            <td>Ferry Angkutan Dek Bawah</td>
-                                            <td style="font-weight: 700; color: var(--accent-cyan);">Rp {{ number_format($sched->price_vehicle, 0, ',', '.') }}</td>
-                                            <td>Termasuk tiket pengemudi, keamanan deck guard.</td>
-                                        </tr>
-                                    @else
-                                        <tr>
-                                            <td><strong>Semua Kendaraan</strong></td>
-                                            <td>-</td>
-                                            <td style="font-weight: 700; color: #94a3b8;">Tidak Melayani</td>
-                                            <td>Kapal ini khusus melayani angkutan penumpang saja.</td>
-                                        </tr>
-                                    @endif
-                                @endforeach
-                            </tbody>
-                        </table>
+
+                    <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-dark-muted);">
+                        <strong style="color: var(--primary-navy);">Jadwal Keberangkatan:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; padding: 0;">
+                            @foreach($ship->schedules as $sched)
+                                <li>
+                                    <strong>{{ $sched->origin_port }} &rarr; {{ $sched->destination_port }}:</strong>
+                                    Hari <span style="color: var(--accent-orange); font-weight: 700;">{{ $sched->days_of_week }}</span> (Jam {{ $sched->departure_time }})
+                                </li>
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
             @endforeach
         </div>
-        
+
+        <!-- Detailed Official Tariff Tables -->
+        <div style="margin-top: 60px;">
+            <h3 style="text-align: center; color: var(--primary-navy); margin-bottom: 10px; font-size: 1.6rem;">Tabel Tarif Tiket Penumpang & Kendaraan (Harga Kantor)</h3>
+            <p style="text-align: center; color: var(--text-light-muted); font-size: 0.9rem; margin-bottom: 40px;">* Harga tiket penumpang sudah termasuk Pass Penumpang (LC) Rp 44.500</p>
+
+            <!-- Table 1: Parepare - Samarinda & Parepare - Bontang -->
+            <div style="background-color: var(--bg-light); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm); margin-bottom: 40px;">
+                <div style="background-color: var(--primary-navy); color: white; padding: 14px 20px; border-radius: var(--radius-sm); margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                    <h4 style="margin: 0; font-size: 1.1rem; color: #ffffff;">RUTE: PAREPARE - SAMARINDA & PAREPARE - BONTANG</h4>
+                    <span style="font-size: 0.85rem; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 12px;">KM. Queen Soya & KM. Cattleya Express</span>
+                </div>
+
+                <h5 style="color: var(--primary-navy); margin-bottom: 12px;">1. Tiket Penumpang</h5>
+                <div class="table-responsive" style="margin-bottom: 24px;">
+                    <table class="legal-table" style="box-shadow: none; border-radius: 0;">
+                        <thead>
+                            <tr>
+                                <th>Jenis Tiket Penumpang</th>
+                                <th>Setoran (Rp)</th>
+                                <th>Di Tiket (Rp)</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Kelas Deck 3, Deck 2 (&ge; 10 Tahun)</strong></td>
+                                <td>Rp 480.000</td>
+                                <td style="font-weight: 700; color: var(--accent-orange);">Rp 512.000</td>
+                                <td>Kabin ber-AC / Dek Kamar</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ekonomi (&ge; 10 Tahun)</strong></td>
+                                <td>Rp 410.000</td>
+                                <td style="font-weight: 700; color: var(--accent-orange);">Rp 442.000</td>
+                                <td>Fasilitas dek tempat tidur standar</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Anak-Anak (2 - 10 Tahun)</strong></td>
+                                <td>Rp 280.000</td>
+                                <td style="font-weight: 700; color: var(--accent-orange);">Rp 312.000</td>
+                                <td>Tarif khusus anak</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h5 style="color: var(--primary-navy); margin-bottom: 12px;">2. Tarif Kendaraan (Kosong) <span style="font-size: 0.8rem; font-weight: normal; color: var(--accent-orange);">(Belum termasuk tiket supir)</span></h5>
+                <div class="table-responsive">
+                    <table class="legal-table" style="box-shadow: none; border-radius: 0;">
+                        <thead>
+                            <tr>
+                                <th>Jenis Kendaraan</th>
+                                <th>Samarinda (Rp)</th>
+                                <th>Bontang (Rp)</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Sepeda Motor (&lt; 150 cc)</strong></td>
+                                <td style="font-weight: 700; color: var(--accent-cyan);">Rp 510.000</td>
+                                <td style="font-weight: 700; color: var(--accent-cyan);">Rp 460.000</td>
+                                <td>Dengan Buruh</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sepeda Motor (&gt; 150 cc)</strong></td>
+                                <td style="font-weight: 700; color: var(--accent-cyan);">Rp 560.000</td>
+                                <td style="font-weight: 700; color: var(--accent-cyan);">Rp 510.000</td>
+                                <td>Dengan Buruh</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sedan / Jeep / Kijang & Sejenisnya</strong> (Mobil Mewah / Pribadi)</td>
+                                <td style="font-weight: 700; color: var(--accent-cyan);" colspan="2">Rp 3.400.000</td>
+                                <td>Kendaraan Pribadi</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Truck TS Dyna (6 Roda)</strong></td>
+                                <td style="font-weight: 700; color: var(--accent-cyan);" colspan="2">Rp 4.600.000</td>
+                                <td>Truk Sedang</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Truck (10 Roda)</strong></td>
+                                <td style="font-weight: 700; color: var(--accent-cyan);" colspan="2">Rp 7.100.000</td>
+                                <td>Truk Besar / Tronton</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Excavator PC 200</strong></td>
+                                <td style="font-weight: 700; color: var(--accent-cyan);" colspan="2">Rp 24.450.000</td>
+                                <td>Alat Berat</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Table 2: Parepare - Nunukan -->
+            <div style="background-color: var(--bg-light); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm);">
+                <div style="background-color: var(--primary-navy); color: white; padding: 14px 20px; border-radius: var(--radius-sm); margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                    <h4 style="margin: 0; font-size: 1.1rem; color: #ffffff;">RUTE: PAREPARE - NUNUKAN</h4>
+                    <span style="font-size: 0.85rem; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 12px;">KM. Pantokrator</span>
+                </div>
+
+                <h5 style="color: var(--primary-navy); margin-bottom: 12px;">1. Tiket Penumpang</h5>
+                <div class="table-responsive" style="margin-bottom: 24px;">
+                    <table class="legal-table" style="box-shadow: none; border-radius: 0;">
+                        <thead>
+                            <tr>
+                                <th>Jenis Tiket Penumpang</th>
+                                <th>Setoran (Rp)</th>
+                                <th>Di Tiket (Rp)</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Kelas (&ge; 10 Tahun)</strong></td>
+                                <td>Rp 660.000</td>
+                                <td style="font-weight: 700; color: var(--accent-orange);">Rp 672.000</td>
+                                <td>Kabin ber-AC / Kelas Dek</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ekonomi (&ge; 10 Tahun)</strong></td>
+                                <td>Rp 625.000</td>
+                                <td style="font-weight: 700; color: var(--accent-orange);">Rp 637.000</td>
+                                <td>Fasilitas dek tempat tidur standar</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Anak-Anak (2 - 10 Tahun)</strong></td>
+                                <td>Rp 355.000</td>
+                                <td style="font-weight: 700; color: var(--accent-orange);">Rp 367.000</td>
+                                <td>Tarif khusus anak</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h5 style="color: var(--primary-navy); margin-bottom: 12px;">2. Tarif Kendaraan (Kosong) <span style="font-size: 0.8rem; font-weight: normal; color: var(--accent-orange);">(Belum termasuk tiket supir)</span></h5>
+                <div class="table-responsive">
+                    <table class="legal-table" style="box-shadow: none; border-radius: 0;">
+                        <thead>
+                            <tr>
+                                <th>Jenis Kendaraan</th>
+                                <th>Tarif Nunukan (Rp)</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Sepeda Motor (&lt; 150 cc)</strong></td>
+                                <td style="font-weight: 700; color: var(--accent-cyan);">Rp 650.000</td>
+                                <td>Motor kecil</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sepeda Motor (&gt; 150 cc)</strong></td>
+                                <td style="font-weight: 700; color: var(--accent-cyan);">Rp 700.000</td>
+                                <td>Motor besar</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sedan / Jeep / Kijang & Sejenisnya</strong> (Mobil Mewah / Pribadi)</td>
+                                <td style="font-weight: 700; color: var(--accent-cyan);">Rp 5.200.000</td>
+                                <td>Kendaraan Pribadi</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Truck TS Dyna (6 Roda)</strong></td>
+                                <td style="font-weight: 700; color: var(--accent-cyan);">Rp 6.200.000</td>
+                                <td>Truk Sedang</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Truck (10 Roda)</strong></td>
+                                <td style="font-weight: 700; color: var(--accent-cyan);">Rp 10.200.000</td>
+                                <td>Truk Besar / Tronton</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Excavator PC 200</strong></td>
+                                <td style="font-weight: 700; color: var(--accent-cyan);">Rp 35.000.000</td>
+                                <td>Alat Berat</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <div class="booking-notice" style="margin-top: 40px;">
-            <p><strong>Catatan Penting Pemesanan:</strong> Pembelian tiket kapal penumpang niaga di atas disimulasikan secara lokal. Untuk pembelian tiket fisik resmi, silakan kunjungi agen tiket resmi pelabuhan PT PANCA MERAK SAMUDERA atau hubungi keagenan kami melalui nomor WhatsApp di pojok kanan bawah halaman.</p>
+            <p><strong>Catatan Penting Pemesanan:</strong> Pembelian tiket fisik resmi dan pemesanan muatan kendaraan dapat dilakukan langsung melalui Kantor Keagenan PT PANCA MERAK SAMUDERA (Jl. Bau Masepe No.419 F, Telp: 0421-21649, Parepare) atau hubungi layanan WhatsApp keagenan kami.</p>
         </div>
     </div>
 </section>

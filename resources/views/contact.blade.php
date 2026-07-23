@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- Page Header Banner -->
+
 <section class="page-header" style="background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%); padding: 60px 0; border-bottom: 1px solid var(--border-dark); text-align: center; color: #ffffff;">
     <div class="container">
         <span class="sub-title">Hubungi Kami</span>
@@ -11,12 +11,12 @@
     </div>
 </section>
 
-<!-- Contact Section -->
+
 <section class="contact-section" style="padding: 80px 0; background-color: #ffffff;">
     <div class="container">
         <div class="contact-grid">
             
-            <!-- Branch Offices Details -->
+            
             <div class="contact-info-panel">
                 <h2>Informasi Kontak Kantor Cabang</h2>
                 <p style="color: var(--text-light-muted); margin-bottom: 30px;">PT PANCA MERAK SAMUDERA mengoperasikan tiga titik jaringan kantor utama guna menjamin koordinasi pelayaran lancar antara wilayah Jawa, Kalimantan, dan Sulawesi.</p>
