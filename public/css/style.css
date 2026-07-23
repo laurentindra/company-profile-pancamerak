@@ -206,22 +206,22 @@ img {
 }
 
 .pms-letterhead-banner {
-    padding: 24px 0 10px;
+    padding: 12px 0 4px;
 }
 
 .pms-letterhead-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .pms-logo-col {
-    flex: 0 0 130px;
+    flex: 0 0 95px;
 }
 
 .pms-header-logo {
-    width: 120px;
+    width: 85px;
     height: auto;
     object-fit: contain;
 }
@@ -235,30 +235,30 @@ img {
     display: block;
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 0.95rem;
     color: #2563eb; /* Blue subtitle */
-    letter-spacing: 2px;
-    margin-bottom: 4px;
+    letter-spacing: 1.5px;
+    margin-bottom: 2px;
     text-transform: uppercase;
 }
 
 .pms-header-title {
     font-family: var(--font-heading);
     font-weight: 900;
-    font-size: 2.2rem;
+    font-size: 1.6rem;
     color: #f87171; /* Coral Red title */
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
     margin: 0;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: 1.15;
 }
 
 .pms-address-col {
-    flex: 0 0 320px;
+    flex: 0 0 280px;
     text-align: right;
-    font-size: 0.78rem;
+    font-size: 0.68rem;
     color: #1e40af;
-    line-height: 1.35;
+    line-height: 1.25;
     font-style: italic;
 }
 
@@ -266,7 +266,7 @@ img {
     font-weight: 700;
     font-style: normal;
     display: block;
-    font-size: 0.82rem;
+    font-size: 0.72rem;
     color: #1e3a8a;
 }
 
@@ -277,9 +277,10 @@ img {
 .pms-double-line {
     border-top: 2px solid #2563eb;
     border-bottom: 1px solid #2563eb;
-    height: 4px;
+    height: 3px;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 8px;
+    margin-bottom: 2px;
 }
 
 /* Header Navigation Bar (Sticky with Hamburger Toggle) */
@@ -288,23 +289,15 @@ img {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 12px 0;
+    padding: 8px 0;
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
 }
 
 .nav-bar-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     position: relative;
-}
-
-.nav-bar-brand {
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 0.95rem;
-    color: #ffffff;
-    letter-spacing: 1.5px;
 }
 
 /* 3-Lines Hamburger Icon (Always Present) */
@@ -312,8 +305,8 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 22px;
+    width: 26px;
+    height: 18px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -330,7 +323,7 @@ img {
 }
 
 .nav-toggle.active span:nth-child(1) {
-    transform: translateY(9.5px) rotate(45deg);
+    transform: translateY(7.5px) rotate(45deg);
 }
 
 .nav-toggle.active span:nth-child(2) {
@@ -338,7 +331,7 @@ img {
 }
 
 .nav-toggle.active span:nth-child(3) {
-    transform: translateY(-9.5px) rotate(-45deg);
+    transform: translateY(-7.5px) rotate(-45deg);
 }
 
 /* Dropdown Menu Overlay */

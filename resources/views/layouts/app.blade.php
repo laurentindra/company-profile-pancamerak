@@ -106,8 +106,6 @@
         <!-- Sticky Navigation Bar with Hamburger Icon -->
         <div class="header-nav-bar">
             <div class="container nav-bar-container">
-                <span class="nav-bar-brand">MENU UTAMA</span>
-
                 <!-- 3-Lines Hamburger Button -->
                 <button class="nav-toggle" aria-label="Toggle navigation">
                     <span></span>
