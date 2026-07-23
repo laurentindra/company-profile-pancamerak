@@ -89,32 +89,160 @@
             <p class="section-desc">Pimpinan kepengurusan maritim yang mengawal arah kemajuan dan keberlanjutan bisnis PT PANCA MERAK SAMUDERA.</p>
         </div>
         
-        <div class="management-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px;">
-            <div class="member-card" style="background-color: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 30px; text-align: center; box-shadow: var(--shadow-sm); transition: var(--transition-smooth);">
-                <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
-                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        <!-- Management Grid Cards -->
+        <div class="management-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 50px;">
+            <div class="member-card" style="background-color: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 24px; text-align: center; box-shadow: var(--shadow-sm);">
+                <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
+                    <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                 </div>
-                <h4 style="color: var(--primary-navy); font-size: 1.1rem; margin-bottom: 4px;">Capt. H. Panca Merak, M.Mar.</h4>
-                <span style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 12px;">Komisaris Utama</span>
-                <p style="font-size: 0.85rem; color: var(--text-light-muted); line-height: 1.5;">Praktisi senior perkapalan niaga nasional dengan pengalaman maritim lebih dari 30 tahun.</p>
+                <h4 style="color: var(--primary-navy); font-size: 1.1rem; margin-bottom: 4px;">ENNY ERAWATI</h4>
+                <span style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 8px;">Komisaris Utama</span>
+                <p style="font-size: 0.8rem; color: var(--text-light-muted); margin: 0;">TTL: Surabaya, 18 September 1948</p>
             </div>
             
-            <div class="member-card" style="background-color: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 30px; text-align: center; box-shadow: var(--shadow-sm); transition: var(--transition-smooth);">
-                <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
-                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            <div class="member-card" style="background-color: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 24px; text-align: center; box-shadow: var(--shadow-sm);">
+                <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
+                    <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                 </div>
-                <h4 style="color: var(--primary-navy); font-size: 1.1rem; margin-bottom: 4px;">H. Merak Panca, S.E.</h4>
-                <span style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 12px;">Direktur Utama</span>
-                <p style="font-size: 0.85rem; color: var(--text-light-muted); line-height: 1.5;">Memimpin eksekusi pengembangan armada dan kemitraan kontrak sewa tambang batubara.</p>
+                <h4 style="color: var(--primary-navy); font-size: 1.1rem; margin-bottom: 4px;">RUDY EFFENDI SUMINTO</h4>
+                <span style="font-size: 0.8rem; color: var(--accent-orange); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 8px;">Direktur Utama</span>
+                <p style="font-size: 0.8rem; color: var(--text-light-muted); margin: 0;">TTL: Samarinda, 29 Maret 1973</p>
             </div>
-            
-            <div class="member-card" style="background-color: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 30px; text-align: center; box-shadow: var(--shadow-sm); transition: var(--transition-smooth);">
-                <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
-                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+
+            <div class="member-card" style="background-color: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 24px; text-align: center; box-shadow: var(--shadow-sm);">
+                <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
+                    <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                 </div>
-                <h4 style="color: var(--primary-navy); font-size: 1.1rem; margin-bottom: 4px;">Capt. Setyo Utomo, M.Mar.</h4>
-                <span style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 12px;">Direktur Operasional</span>
-                <p style="font-size: 0.85rem; color: var(--text-light-muted); line-height: 1.5;">Mengawasi keselamatan navigasi kru, standar kelaikan laut kapal, dan penanganan kargo tambang.</p>
+                <h4 style="color: var(--primary-navy); font-size: 1.1rem; margin-bottom: 4px;">ANDY SUDIONO</h4>
+                <span style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 8px;">Komisaris</span>
+                <p style="font-size: 0.8rem; color: var(--text-light-muted); margin: 0;">TTL: Surabaya, 21 September 1983</p>
+            </div>
+
+            <div class="member-card" style="background-color: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 24px; text-align: center; box-shadow: var(--shadow-sm);">
+                <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
+                    <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+                <h4 style="color: var(--primary-navy); font-size: 1.1rem; margin-bottom: 4px;">LILY INDRAWATI</h4>
+                <span style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 8px;">Komisaris</span>
+                <p style="font-size: 0.8rem; color: var(--text-light-muted); margin: 0;">TTL: Samarinda, 15 Juni 1977</p>
+            </div>
+
+            <div class="member-card" style="background-color: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 24px; text-align: center; box-shadow: var(--shadow-sm);">
+                <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
+                    <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+                <h4 style="color: var(--primary-navy); font-size: 1.1rem; margin-bottom: 4px;">HERY SUDIANTO</h4>
+                <span style="font-size: 0.8rem; color: var(--primary-navy); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 8px;">Direktur</span>
+                <p style="font-size: 0.8rem; color: var(--text-light-muted); margin: 0;">TTL: Samarinda, 08 Juni 1979</p>
+            </div>
+
+            <div class="member-card" style="background-color: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 24px; text-align: center; box-shadow: var(--shadow-sm);">
+                <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
+                    <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+                <h4 style="color: var(--primary-navy); font-size: 1.1rem; margin-bottom: 4px;">LEO AGUSTINUS</h4>
+                <span style="font-size: 0.8rem; color: var(--primary-navy); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 8px;">Direktur</span>
+                <p style="font-size: 0.8rem; color: var(--text-light-muted); margin: 0;">TTL: Surabaya, 07 Desember 1986</p>
+            </div>
+        </div>
+
+        <!-- Official Legal Table of Management -->
+        <div style="margin-top: 50px; background-color: #ffffff; padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <h3 style="color: var(--primary-navy); margin-bottom: 20px; font-size: 1.2rem; border-bottom: 2px solid var(--accent-cyan); padding-bottom: 10px;">Daftar Detail Kepengurusan Perusahaan</h3>
+            <div class="table-responsive">
+                <table class="legal-table" style="box-shadow: none; border-radius: 0;">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Lengkap & Identitas</th>
+                            <th>Jabatan</th>
+                            <th>NPWP</th>
+                            <th>Tempat, Tanggal Lahir (TTL)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <strong>ENNY ERAWATI</strong><br>
+                                <span style="font-size: 0.8rem; color: var(--text-light-muted);">NIK: 3578265812480001</span>
+                            </td>
+                            <td><span style="font-weight: 700; color: var(--accent-cyan);">KOMISARIS UTAMA</span></td>
+                            <td>653410415619000</td>
+                            <td>SURABAYA, 18 September 1948</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <strong>RUDY EFFENDI SUMINTO</strong><br>
+                                <span style="font-size: 0.8rem; color: var(--text-light-muted);">NIK: 3578262903730001</span>
+                            </td>
+                            <td><span style="font-weight: 700; color: var(--accent-orange);">DIREKTUR UTAMA</span></td>
+                            <td>078639101619000</td>
+                            <td>SAMARINDA, 29 Maret 1973</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>
+                                <strong>ANDY SUDIONO</strong><br>
+                                <span style="font-size: 0.8rem; color: var(--text-light-muted);">NIK: 3578262109830001</span>
+                            </td>
+                            <td><strong>KOMISARIS</strong></td>
+                            <td>258561851619000</td>
+                            <td>SURABAYA, 21 September 1983</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>
+                                <strong>LILY INDRAWATI</strong><br>
+                                <span style="font-size: 0.8rem; color: var(--text-light-muted);">NIK: 3578265506770001</span>
+                            </td>
+                            <td><strong>KOMISARIS</strong></td>
+                            <td>367912276618001</td>
+                            <td>SAMARINDA, 15 Juni 1977</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>
+                                <strong>HERY SUDIANTO</strong><br>
+                                <span style="font-size: 0.8rem; color: var(--text-light-muted);">NIK: 3578260806790001</span>
+                            </td>
+                            <td><strong>DIREKTUR</strong></td>
+                            <td>078639119619000</td>
+                            <td>SAMARINDA, 08 Juni 1979</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>
+                                <strong>LEO AGUSTINUS</strong><br>
+                                <span style="font-size: 0.8rem; color: var(--text-light-muted);">NIK: 3578260712860002</span>
+                            </td>
+                            <td><strong>DIREKTUR</strong></td>
+                            <td>258562263619000</td>
+                            <td>SURABAYA, 07 Desember 1986</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>
+                                <strong>TONY SUSANTO</strong><br>
+                                <span style="font-size: 0.8rem; color: var(--text-light-muted);">NIK: 3578260908740003</span>
+                            </td>
+                            <td>-</td>
+                            <td>078639127619000</td>
+                            <td>SAMARINDA, 09 Agustus 1974</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>
+                                <strong>JASON IMMANUEL GABRIEL</strong><br>
+                                <span style="font-size: 0.8rem; color: var(--text-light-muted);">NIK: 3578260101990001</span>
+                            </td>
+                            <td>-</td>
+                            <td>437714611619000</td>
+                            <td>SURABAYA, 01 Januari 1999</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
