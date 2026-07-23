@@ -20,11 +20,12 @@
     <div class="container">
         <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: flex-start; margin-bottom: 60px;">
             
-            <!-- Graphic Illustration and Description -->
+            <!-- Graphic Illustration, Gallery and Description -->
             <div>
-                <div style="background-color: var(--primary-navy); border-radius: var(--radius-md); text-align: center; color: var(--accent-cyan-light); margin-bottom: 30px; border: 1px solid var(--border-dark); min-height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                    @if($ship->image_path && file_exists(public_path($ship->image_path)))
-                        <img src="{{ asset($ship->image_path) }}" alt="{{ $ship->name }}" style="width: 100%; height: 100%; object-fit: cover; max-height: 350px;">
+                @php $images = $ship->images; @endphp
+                <div style="background-color: var(--primary-navy); border-radius: var(--radius-md); text-align: center; color: var(--accent-cyan-light); margin-bottom: 15px; border: 1px solid var(--border-dark); min-height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+                    @if(count($images) > 0)
+                        <img id="main-fleet-img" src="{{ asset($images[0]) }}" alt="{{ $ship->name }}" style="width: 100%; height: 100%; object-fit: cover; max-height: 350px; transition: opacity 0.3s ease;">
                     @else
                         <div style="padding: 50px;">
                             @if($ship->type === 'passenger')
@@ -37,6 +38,16 @@
                         </div>
                     @endif
                 </div>
+
+                @if(count($images) > 1)
+                    <div class="gallery-thumbnails" style="display: flex; gap: 10px; margin-bottom: 25px; overflow-x: auto; padding-bottom: 5px;">
+                        @foreach($images as $idx => $img)
+                            <div class="thumb-item {{ $idx === 0 ? 'active' : '' }}" onclick="switchMainImage('{{ asset($img) }}', this)" style="cursor: pointer; width: 80px; height: 60px; border-radius: 6px; overflow: hidden; border: 2px solid {{ $idx === 0 ? '#2563eb' : '#cbd5e1' }}; flex-shrink: 0; transition: all 0.2s ease;">
+                                <img src="{{ asset($img) }}" alt="Foto {{ $ship->name }} {{ $idx + 1 }}" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        @endforeach
+                    </div>
+                @endif
                 
                 <h3 style="color: var(--primary-navy); margin-bottom: 15px;">Deskripsi Operasional</h3>
                 <p style="color: var(--text-light-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
@@ -172,5 +183,25 @@
     </div>
 </section>
 
-@endsection
+<script>
+    function switchMainImage(src, el) {
+        const mainImg = document.getElementById('main-fleet-img');
+        if (mainImg) {
+            mainImg.style.opacity = '0.3';
+            setTimeout(() => {
+                mainImg.src = src;
+                mainImg.style.opacity = '1';
+            }, 150);
+        }
+        document.querySelectorAll('.thumb-item').forEach(item => {
+            item.style.borderColor = '#cbd5e1';
+            item.classList.remove('active');
+        });
+        if (el) {
+            el.style.borderColor = '#2563eb';
+            el.classList.add('active');
+        }
+    }
+</script>
 
+@endsection

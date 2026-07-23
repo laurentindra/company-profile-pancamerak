@@ -65,7 +65,7 @@ class DatabaseSeeder extends Seeder
             'dimensions' => '-',
             'engine' => '-',
             'description' => 'Ditambahkan pada tahun 2013, merupakan armada kapal penumpang ketiga yang dimiliki oleh PT PANCA MERAK SAMUDERA dengan fokus rute Parepare ke Nunukan.',
-            'image_path' => 'images/ships/km_pantokrator2.jpg'
+            'image_path' => 'images/ships/pantokrator_2.jpg,images/ships/pantokrator_1.png'
         ]);
 
         // B. Coal Barges (Tongkang Batu Bara)
@@ -78,7 +78,7 @@ class DatabaseSeeder extends Seeder
             'nt' => 970,
             'dimensions' => '87,84 x 24,40 x 5,50 m',
             'description' => 'Tongkang batu bara ukuran 300 Feet milik PT PANCA MERAK SAMUDERA untuk angkutan tambang curah.',
-            'image_path' => 'images/ships/barge_charles_205.png'
+            'image_path' => 'images/ships/charles_205_1.jpg,images/ships/charles_205_2.png'
         ]);
 
         Ship::create([
@@ -89,7 +89,7 @@ class DatabaseSeeder extends Seeder
             'nt' => 970,
             'dimensions' => '87,84 x 24,40 x 5,50 m',
             'description' => 'Tongkang batu bara ukuran 300 Feet milik PT PANCA MERAK SAMUDERA. Ditarik oleh Tugboat Hector 111.',
-            'image_path' => 'images/ships/barge_charles_207.png'
+            'image_path' => 'images/ships/charles_207_1.jpg,images/ships/charles_207_2.png'
         ]);
 
         Ship::create([
@@ -100,7 +100,7 @@ class DatabaseSeeder extends Seeder
             'nt' => 970,
             'dimensions' => '87,84 x 24,40 x 5,50 m',
             'description' => 'Tongkang batu bara ukuran 300 Feet milik PT PANCA MERAK SAMUDERA. Ditarik oleh Tugboat Hector 777.',
-            'image_path' => 'images/ships/barge_charles_205.png'
+            'image_path' => 'images/ships/charles_205_2.png'
         ]);
 
         Ship::create([
@@ -111,7 +111,7 @@ class DatabaseSeeder extends Seeder
             'nt' => 970,
             'dimensions' => '87,84 x 24,40 x 5,50 m',
             'description' => 'Tongkang batu bara ukuran 300 Feet milik PT PANCA MERAK SAMUDERA untuk logistik tambang laut.',
-            'image_path' => 'images/ships/barge_charles_207.png'
+            'image_path' => 'images/ships/charles_210_1.jpg'
         ]);
 
         // PMS Class - 270 Feet
@@ -123,7 +123,7 @@ class DatabaseSeeder extends Seeder
             'nt' => 720,
             'dimensions' => '82,30 x 21,34 x 4,88 m',
             'description' => 'Tongkang batu bara ukuran 270 Feet milik PT PANCA MERAK SAMUDERA untuk distribusi kargo laut.',
-            'image_path' => 'images/ships/barge_pms_206.jpeg'
+            'image_path' => 'images/ships/pms_201_1.jpg'
         ]);
 
         Ship::create([
@@ -134,7 +134,7 @@ class DatabaseSeeder extends Seeder
             'nt' => 720,
             'dimensions' => '82,30 x 21,34 x 4,88 m',
             'description' => 'Tongkang batu bara ukuran 270 Feet milik PT PANCA MERAK SAMUDERA untuk logistik laut.',
-            'image_path' => 'images/ships/barge_pms_206.jpeg'
+            'image_path' => 'images/ships/pms_206_1.jpeg'
         ]);
 
         Ship::create([
@@ -145,7 +145,7 @@ class DatabaseSeeder extends Seeder
             'nt' => 720,
             'dimensions' => '82,30 x 21,34 x 4,88 m',
             'description' => 'Tongkang batu bara ukuran 270 Feet milik PT PANCA MERAK SAMUDERA. Ditarik oleh Tugboat Hector 103.',
-            'image_path' => 'images/ships/barge_pms_206.jpeg'
+            'image_path' => 'images/ships/pms_203_1.jpg,images/ships/pms_203_2.jpg'
         ]);
 
         Ship::create([
@@ -156,7 +156,7 @@ class DatabaseSeeder extends Seeder
             'nt' => 720,
             'dimensions' => '82,30 x 21,34 x 4,88 m',
             'description' => 'Tongkang batu bara ukuran 270 Feet bagian dari ekspansi armada logistik PT PANCA MERAK SAMUDERA.',
-            'image_path' => 'images/ships/barge_pms_206.jpeg'
+            'image_path' => 'images/ships/pms_206_1.jpeg'
         ]);
 
         // C. Tugboats (Kapal Tunda Hector)
@@ -168,7 +168,7 @@ class DatabaseSeeder extends Seeder
             'dimensions' => '26,53 x 8,00 x 3,65 m',
             'engine' => '2 x 823 HP',
             'description' => 'Kapal tunda (TB H 102) bermesin ganda 823 HP milik PT PANCA MERAK SAMUDERA.',
-            'image_path' => 'images/ships/tugboat_hector_102.png'
+            'image_path' => 'images/ships/hector_102_1.jpg,images/ships/hector_102_2.jpg'
         ]);
 
         Ship::create([
@@ -179,7 +179,7 @@ class DatabaseSeeder extends Seeder
             'dimensions' => '26,53 x 8,00 x 3,60 m',
             'engine' => '2 x 823 HP',
             'description' => 'Kapal tunda (TB H 103) bermesin ganda 823 HP, dikhususkan menarik tongkang PMS 203.',
-            'image_path' => 'images/ships/tugboat_hector_103.jpeg'
+            'image_path' => 'images/ships/hector_103_1.jpg,images/ships/hector_103_2.jpeg'
         ]);
 
         Ship::create([
@@ -190,7 +190,7 @@ class DatabaseSeeder extends Seeder
             'dimensions' => '24,64 x 8,00 x 3,70 m',
             'engine' => '2 x 820 HP',
             'description' => 'Kapal tunda (TB H 106) bermesin ganda 820 HP bertugas menarik tongkang logistik batu bara.',
-            'image_path' => 'images/ships/tugboat_hector_106.png'
+            'image_path' => 'images/ships/hector_106_1.png'
         ]);
 
         Ship::create([
@@ -201,7 +201,7 @@ class DatabaseSeeder extends Seeder
             'dimensions' => '25,51 x 8,00 x 3,65 m',
             'engine' => '2 x 820 HP',
             'description' => 'Kapal tunda (TB H 111) bermesin ganda 820 HP bertugas menarik tongkang Charles 207.',
-            'image_path' => 'images/ships/tugboat_hector_111.png'
+            'image_path' => 'images/ships/hector_111_1.jpg,images/ships/hector_111_2.png'
         ]);
 
         Ship::create([
@@ -212,7 +212,7 @@ class DatabaseSeeder extends Seeder
             'dimensions' => '24,82 x 7,65 x 4,05 m',
             'engine' => '2 x 820 HP',
             'description' => 'Kapal tunda (TB H 777) bertugas menarik tongkang Charles 209 dalam logistik laut.',
-            'image_path' => 'images/ships/tugboat_hector_777.jpeg'
+            'image_path' => 'images/ships/hector_777_1.jpeg,images/ships/hector_777_2.jpg'
         ]);
 
         Ship::create([
@@ -223,7 +223,7 @@ class DatabaseSeeder extends Seeder
             'dimensions' => '25,50 x 8,00 x 3,65 m',
             'engine' => '2 x 850 HP',
             'description' => 'Kapal tunda (TB H 888) bermesin ganda 850 HP untuk operasional penarikan tongkang.',
-            'image_path' => 'images/ships/tugboat_hector_178.jpg'
+            'image_path' => 'images/ships/hector_888_1.jpg'
         ]);
 
         Ship::create([
@@ -234,7 +234,7 @@ class DatabaseSeeder extends Seeder
             'dimensions' => '26,00 x 8,00 x 3,70 m',
             'engine' => '2 x 850 HP',
             'description' => 'Kapal tunda (TB H 178) ditenagai mesin ganda 850 HP untuk menarik tongkang 300 Feet.',
-            'image_path' => 'images/ships/tugboat_hector_178.jpg'
+            'image_path' => 'images/ships/hector_178_1.jpg,images/ships/hector_178_2.jpg'
         ]);
 
 
