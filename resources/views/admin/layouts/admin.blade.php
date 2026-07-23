@@ -509,6 +509,99 @@
             max-height: 16px !important;
         }
 
+        /* Mobile Sidebar Overlay & Responsiveness */
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.25s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-sidebar-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 6px;
+            color: #1e293b;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 992px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+                width: 260px;
+                z-index: 1000;
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+                box-shadow: 10px 0 30px rgba(0, 0, 0, 0.3);
+            }
+
+            .main-wrapper {
+                margin-left: 0 !important;
+                width: 100% !important;
+            }
+
+            .mobile-sidebar-toggle {
+                display: flex;
+            }
+
+            .topbar {
+                padding: 0 16px;
+            }
+
+            .content-area {
+                padding: 16px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .topbar-title h2 {
+                font-size: 0.95rem;
+            }
+
+            .btn-view-site span {
+                display: none;
+            }
+
+            .card {
+                padding: 16px;
+            }
+
+            .filter-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-filter-group {
+                flex-direction: column;
+                align-items: stretch;
+                width: 100%;
+            }
+
+            .search-filter-group select,
+            .search-filter-group input {
+                width: 100% !important;
+            }
+        }
+
         /* Footer */
         .admin-footer {
             padding: 16px 28px;
@@ -522,8 +615,11 @@
 </head>
 <body>
 
+    <!-- Mobile Backdrop Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
     <!-- Sidebar Navigation -->
-    <aside class="sidebar">
+    <aside class="sidebar" id="adminSidebar">
         <a href="{{ route('admin.dashboard') }}" class="sidebar-brand">
             <img src="{{ asset('images/logo.png') }}" alt="Logo PMS">
             <div class="sidebar-brand-text">
@@ -590,14 +686,19 @@
     <div class="main-wrapper">
         <!-- Topbar -->
         <header class="topbar">
-            <div class="topbar-title">
-                <h2>@yield('header_title', 'Dashboard Overview')</h2>
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <button type="button" class="mobile-sidebar-toggle" id="sidebarToggleBtn" aria-label="Toggle Sidebar">
+                    <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+                <div class="topbar-title">
+                    <h2>@yield('header_title', 'Dashboard Overview')</h2>
+                </div>
             </div>
             
             <div class="topbar-actions">
                 <a href="{{ route('home') }}" target="_blank" class="btn-view-site">
                     <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                    Lihat Situs Utama
+                    <span>Lihat Situs Utama</span>
                 </a>
             </div>
         </header>
@@ -624,6 +725,26 @@
             &copy; {{ date('Y') }} PT PANCA MERAK SAMUDERA - Sistem Informasi Admin Pelayaran.
         </footer>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.getElementById('adminSidebar');
+            const toggleBtn = document.getElementById('sidebarToggleBtn');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            if (toggleBtn && sidebar && overlay) {
+                toggleBtn.addEventListener('click', function() {
+                    sidebar.classList.toggle('active');
+                    overlay.classList.toggle('active');
+                });
+
+                overlay.addEventListener('click', function() {
+                    sidebar.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
