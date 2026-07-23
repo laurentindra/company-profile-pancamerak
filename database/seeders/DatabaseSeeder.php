@@ -65,7 +65,7 @@ class DatabaseSeeder extends Seeder
             'dimensions' => '-',
             'engine' => '-',
             'description' => 'Ditambahkan pada tahun 2013, merupakan armada kapal penumpang ketiga yang dimiliki oleh PT PANCA MERAK SAMUDERA dengan fokus rute Parepare ke Nunukan.',
-            'image_path' => 'images/ships/pantokrator.png'
+            'image_path' => 'images/ships/km_pantokrator2.jpg'
         ]);
 
         // B. Coal Barges (Tongkang Batu Bara)
