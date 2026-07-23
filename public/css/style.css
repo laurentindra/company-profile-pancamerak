@@ -199,220 +199,122 @@ img {
     border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
-/* Streamlined Single-Row Kop Surat Header */
+/* Header & Sticky Navbar */
 .header {
-    background-color: #ffffff;
+    background-color: rgba(37, 99, 235, 0.95);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 8px 0 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition-smooth);
 }
-
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
-    position: relative;
-    padding-bottom: 8px;
 }
-
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    text-decoration: none;
 }
-
-.logo-img {
-    height: 42px;
-    width: auto;
-    object-fit: contain;
+.logo-icon {
+    color: var(--accent-cyan-light);
+    background-color: rgba(59, 130, 246, 0.1);
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(59, 130, 246, 0.2);
 }
-
 .logo-text {
     display: flex;
     flex-direction: column;
 }
-
-.brand-subtitle {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 0.72rem;
-    color: #2563eb; /* Blue Kop Surat Subtitle */
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    line-height: 1;
-    margin-bottom: 2px;
-}
-
 .brand-title {
-    font-family: var(--font-heading);
-    font-weight: 900;
-    font-size: 1.15rem;
-    color: #f87171; /* Coral Red Kop Surat Title */
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    line-height: 1;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+.brand-subtitle {
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--accent-cyan-light);
+}
+.logo-img {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
 }
 
-/* Compact Single-Line Inline Offices Contact Strip */
-.header-offices-strip {
+.nav-menu {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 0.75rem;
-    color: #1e40af;
-    font-style: italic;
-    background-color: rgba(37, 99, 235, 0.06);
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: 1px solid rgba(37, 99, 235, 0.18);
+    gap: 30px;
 }
-
-.office-tag strong {
-    color: #1e3a8a;
-    font-style: normal;
-}
-
-.office-divider {
-    color: #93c5fd;
-    font-style: normal;
-}
-
-/* Double Blue Line at bottom of Header */
-.header-double-line {
-    border-top: 2px solid #2563eb;
-    border-bottom: 1px solid #2563eb;
-    height: 3px;
-    width: 100%;
-}
-
-/* 3-Lines Hamburger Icon (Always Present) */
-.nav-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 26px;
-    height: 18px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 1002;
-    padding: 0;
-}
-
-.nav-toggle span {
-    background-color: #1e3a8a;
-    height: 3px;
-    width: 100%;
-    border-radius: 2px;
-    transition: all 0.3s ease-in-out;
-}
-
-.nav-toggle.active span:nth-child(1) {
-    transform: translateY(7.5px) rotate(45deg);
-}
-
-.nav-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.nav-toggle.active span:nth-child(3) {
-    transform: translateY(-7.5px) rotate(-45deg);
-}
-
-@media (max-width: 992px) {
-    .header-offices-strip {
-        display: none;
-    }
-}
-
-/* Dropdown Menu Overlay */
-.nav-menu {
-    position: absolute;
-    top: calc(100% + 12px);
-    right: 0;
-    width: 280px;
-    background-color: #1d4ed8;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
-    border-radius: 0 0 12px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-top: none;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 8px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 1001;
-}
-
-.nav-menu.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
 .nav-link {
     font-family: var(--font-heading);
     font-weight: 600;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.85rem;
+    color: var(--text-dark-muted);
     position: relative;
-    padding: 10px 14px;
-    border-radius: 6px;
-    transition: var(--transition-smooth);
-    display: block;
+    padding: 6px 0;
 }
-
 .nav-link:hover, .nav-link.active {
     color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.15);
 }
-
-.nav-link.active::after {
+.nav-link::after {
     content: '';
     position: absolute;
-    bottom: 4px;
-    left: 14px;
-    width: 30px;
-    height: 3px;
-    background-color: #60a5fa;
-    border-radius: 2px;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-cyan-light);
+    transition: var(--transition-smooth);
 }
-
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
 .contact-btn {
-    background-color: #dc2626 !important;
-    color: #ffffff !important;
-    padding: 12px 18px !important;
-    border-radius: 8px !important;
-    text-align: center;
-    font-weight: 700 !important;
-    margin-top: 6px;
+    background-color: var(--accent-orange);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+}
+.contact-btn:hover {
+    background-color: var(--accent-orange-hover);
+    border-color: var(--accent-orange-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
 }
-
-.contact-btn:hover {
-    background-color: #b91c1c !important;
-    transform: translateY(-2px);
+.contact-btn::after {
+    display: none !important;
 }
 
-@media (max-width: 992px) {
-    .pms-letterhead-wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
-    .pms-header-title {
-        font-size: 1.6rem;
-    }
-    .pms-address-col {
-        text-align: center;
-        flex: 1;
-    }
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 24px;
+}
+.nav-toggle span {
+    background-color: #ffffff;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transition: var(--transition-smooth);
 }
 
 /* Hero Section */

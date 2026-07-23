@@ -56,41 +56,25 @@
         </div>
     </div>
 
-    <!-- Streamlined Kop Surat Header -->
+    <!-- Header Navigation -->
     <header class="header">
         <div class="container header-container">
-            <!-- Brand Logo & Kop Surat Title -->
             <a href="{{ route('home') }}" class="logo">
                 <img src="{{ asset('images/logo.png') }}" alt="Logo PT PANCA MERAK SAMUDERA" class="logo-img">
                 <div class="logo-text">
-                    <span class="brand-subtitle">PERUSAHAAN ANGKUTAN LAUT</span>
-                    <span class="brand-title">P.T. PANCA MERAK SAMUDERA</span>
+                    <span class="brand-title">PANCA MERAK</span>
+                    <span class="brand-subtitle">SAMUDERA</span>
                 </div>
             </a>
 
-            <!-- Compact Single-Line Office Contacts -->
-            <div class="header-offices-strip">
-                <div class="office-tag">
-                    <strong>Pusat (SBY):</strong> (031) 3522385
-                </div>
-                <span class="office-divider">|</span>
-                <div class="office-tag">
-                    <strong>Cab. Samarinda:</strong> (0541) 7273080
-                </div>
-                <span class="office-divider">|</span>
-                <div class="office-tag">
-                    <strong>Cab. Parepare:</strong> (0421) 21649
-                </div>
-            </div>
-
-            <!-- 3-Lines Hamburger Icon Toggle -->
+            <!-- Mobile Nav Toggle -->
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <!-- Nav Menu Dropdown (Appears when hamburger is clicked) -->
+            <!-- Nav Menu -->
             <nav class="nav-menu">
                 <a href="{{ route('home') }}" class="nav-link {{ Route::is('home') ? 'active' : '' }}">Beranda</a>
                 <a href="{{ route('about') }}" class="nav-link {{ Route::is('about') ? 'active' : '' }}">Profil</a>
@@ -100,9 +84,6 @@
                 <a href="{{ route('contact') }}" class="nav-link contact-btn {{ Route::is('contact') ? 'active' : '' }}">Hubungi Kami</a>
             </nav>
         </div>
-
-        <!-- Double Blue Line at bottom of Header -->
-        <div class="header-double-line"></div>
     </header>
 
     <!-- Main Content Area -->
@@ -110,7 +91,7 @@
         @yield('content')
     </main>
 
-    <!-- Footer Section (Restored Original Dark 3-Column Theme) -->
+    <!-- Footer Section -->
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-col about-col">
