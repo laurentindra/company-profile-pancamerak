@@ -23,13 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('loaded');
     }
 
-    // --- MOBILE NAV TOGGLE ---
+    // --- HAMBURGER 3-LINES NAV TOGGLE ---
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
     if (navToggle && navMenu) {
-        navToggle.addEventListener('click', () => {
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             navToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
@@ -40,6 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 navToggle.classList.remove('active');
                 navMenu.classList.remove('active');
             });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
         });
     }
 
