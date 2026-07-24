@@ -113,27 +113,23 @@
                         <thead>
                             <tr>
                                 <th>Jenis Tiket Penumpang</th>
-                                <th>Setoran (Rp)</th>
-                                <th>Di Tiket (Rp)</th>
+                                <th>Harga Tiket (Rp)</th>
                                 <th>Keterangan</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td><strong>Kelas Deck 3, Deck 2 (&ge; 10 Tahun)</strong></td>
-                                <td>Rp 480.000</td>
                                 <td style="font-weight: 700; color: var(--accent-orange);">Rp 512.000</td>
                                 <td>Kabin ber-AC / Dek Kamar</td>
                             </tr>
                             <tr>
                                 <td><strong>Ekonomi (&ge; 10 Tahun)</strong></td>
-                                <td>Rp 410.000</td>
                                 <td style="font-weight: 700; color: var(--accent-orange);">Rp 442.000</td>
                                 <td>Fasilitas dek tempat tidur standar</td>
                             </tr>
                             <tr>
                                 <td><strong>Anak-Anak (2 - 10 Tahun)</strong></td>
-                                <td>Rp 280.000</td>
                                 <td style="font-weight: 700; color: var(--accent-orange);">Rp 312.000</td>
                                 <td>Tarif khusus anak</td>
                             </tr>
@@ -203,27 +199,23 @@
                         <thead>
                             <tr>
                                 <th>Jenis Tiket Penumpang</th>
-                                <th>Setoran (Rp)</th>
-                                <th>Di Tiket (Rp)</th>
+                                <th>Harga Tiket (Rp)</th>
                                 <th>Keterangan</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td><strong>Kelas (&ge; 10 Tahun)</strong></td>
-                                <td>Rp 660.000</td>
                                 <td style="font-weight: 700; color: var(--accent-orange);">Rp 672.000</td>
                                 <td>Kabin ber-AC / Kelas Dek</td>
                             </tr>
                             <tr>
                                 <td><strong>Ekonomi (&ge; 10 Tahun)</strong></td>
-                                <td>Rp 625.000</td>
                                 <td style="font-weight: 700; color: var(--accent-orange);">Rp 637.000</td>
                                 <td>Fasilitas dek tempat tidur standar</td>
                             </tr>
                             <tr>
                                 <td><strong>Anak-Anak (2 - 10 Tahun)</strong></td>
-                                <td>Rp 355.000</td>
                                 <td style="font-weight: 700; color: var(--accent-orange);">Rp 367.000</td>
                                 <td>Tarif khusus anak</td>
                             </tr>
