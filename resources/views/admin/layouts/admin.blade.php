@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Admin Panel') - PT PANCA MERAK SAMUDERA</title>
     
-    <!-- Favicon -->
+    
     <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
     
-    <!-- Google Fonts -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Sidebar */
+        
         .sidebar {
             width: 250px;
             background: var(--admin-sidebar);
@@ -191,7 +191,7 @@
             display: block;
         }
 
-        /* Main Content Wrapper */
+        
         .main-wrapper {
             margin-left: 250px;
             flex: 1;
@@ -200,7 +200,7 @@
             min-height: 100vh;
         }
 
-        /* Topbar */
+        
         .topbar {
             height: 64px;
             background: #ffffff;
@@ -264,13 +264,13 @@
             color: var(--admin-danger);
         }
 
-        /* Content Area */
+        
         .content-area {
             padding: 28px;
             flex: 1;
         }
 
-        /* Flash Alerts */
+        
         .alert {
             padding: 12px 16px;
             border-radius: 8px;
@@ -294,7 +294,7 @@
             color: #991b1b;
         }
 
-        /* UI Components */
+        
         .card {
             background: var(--admin-card);
             border: 1px solid var(--admin-card-border);
@@ -355,7 +355,7 @@
             border-radius: 5px;
         }
 
-        /* Tables */
+        
         .table-responsive {
             overflow-x: auto;
         }
@@ -389,7 +389,7 @@
             background: #f8fafc;
         }
 
-        /* Badges */
+        
         .badge {
             display: inline-block;
             padding: 3px 8px;
@@ -416,7 +416,7 @@
             border: 1px solid #e9d5ff;
         }
 
-        /* Forms */
+        
         .form-group {
             margin-bottom: 18px;
         }
@@ -453,7 +453,7 @@
             gap: 16px;
         }
 
-        /* Clean Pagination Styling */
+        
         .pagination-wrapper {
             margin-top: 24px;
             display: flex;
@@ -509,7 +509,7 @@
             max-height: 16px !important;
         }
 
-        /* Mobile Sidebar Overlay & Responsiveness */
+        
         .sidebar-overlay {
             position: fixed;
             top: 0;
@@ -602,7 +602,7 @@
             }
         }
 
-        /* Footer */
+        
         .admin-footer {
             padding: 16px 28px;
             border-top: 1px solid var(--admin-card-border);
@@ -615,10 +615,10 @@
 </head>
 <body>
 
-    <!-- Mobile Backdrop Overlay -->
+    
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    <!-- Sidebar Navigation -->
+    
     <aside class="sidebar" id="adminSidebar">
         <a href="{{ route('admin.dashboard') }}" class="sidebar-brand">
             <img src="{{ asset('images/logo.png') }}" alt="Logo PMS">
@@ -682,9 +682,9 @@
         </div>
     </aside>
 
-    <!-- Main Wrapper -->
+    
     <div class="main-wrapper">
-        <!-- Topbar -->
+        
         <header class="topbar">
             <div style="display: flex; align-items: center; gap: 12px;">
                 <button type="button" class="mobile-sidebar-toggle" id="sidebarToggleBtn" aria-label="Toggle Sidebar">
@@ -703,7 +703,7 @@
             </div>
         </header>
 
-        <!-- Main Content -->
+        
         <main class="content-area">
             @if(session('success'))
                 <div class="alert alert-success">
@@ -720,7 +720,7 @@
             @yield('content')
         </main>
 
-        <!-- Admin Footer -->
+        
         <footer class="admin-footer">
             &copy; {{ date('Y') }} PT PANCA MERAK SAMUDERA - Sistem Informasi Admin Pelayaran.
         </footer>

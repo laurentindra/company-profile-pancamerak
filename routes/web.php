@@ -9,7 +9,6 @@ use App\Http\Controllers\Admin\AdminShipController;
 use App\Http\Controllers\Admin\AdminScheduleController;
 use App\Http\Controllers\Admin\NewsController;
 
-// Public Web Routes
 Route::get('/', [CompanyProfileController::class, 'home'])->name('home');
 Route::get('/about', [CompanyProfileController::class, 'about'])->name('about');
 Route::get('/services', [CompanyProfileController::class, 'services'])->name('services');
@@ -19,22 +18,17 @@ Route::get('/fleets/{id}', [CompanyProfileController::class, 'fleetDetail'])->na
 Route::get('/contact', [CompanyProfileController::class, 'contact'])->name('contact');
 Route::post('/search-schedule', [CompanyProfileController::class, 'searchSchedule'])->name('search.schedule');
 
-// Admin Authentication Routes
 Route::get('/login', fn() => redirect()->route('admin.login'))->name('login');
 Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
 Route::post('/admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
 
-// Protected Admin Routes
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminDashboardController::class, 'index'])->name('dashboard');
     
-    // Ships CRUD Management
     Route::resource('ships', AdminShipController::class);
     
-    // Schedules CRUD Management
     Route::resource('schedules', AdminScheduleController::class);
 
-    // News CRUD Management
     Route::resource('news', NewsController::class);
 });

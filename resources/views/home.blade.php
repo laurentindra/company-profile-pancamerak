@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- Hero Section -->
+
 <section id="hero" class="hero-section">
     <div class="hero-overlay"></div>
     <div class="hero-bg-asset left-asset">
@@ -22,7 +22,7 @@
             </div>
         </div>
         
-        <!-- Hero Stats Cards -->
+        
         <div class="hero-stats">
             <div class="stat-card">
                 <h3>2001</h3>
@@ -44,7 +44,7 @@
     </div>
 </section>
 
-<!-- Quick Schedule Search Section -->
+
 <section id="home-search" class="schedule-section">
     <div class="container">
         <div class="search-box-wrapper">
@@ -82,20 +82,20 @@
             </form>
         </div>
 
-        <!-- Results Container -->
+        
         <div id="search-results" class="search-results-container" style="display: none;">
             <div class="results-header">
                 <h3>Hasil Pencarian Jadwal</h3>
                 <p id="results-meta"></p>
             </div>
             <div id="results-list" class="results-list">
-                <!-- AJAX results injected here -->
+                
             </div>
         </div>
     </div>
 </section>
 
-<!-- Company Profile Highlight -->
+
 <section id="home-profile" class="about-section">
     <div class="container">
         <div class="about-grid" style="align-items: center;">
@@ -145,7 +145,7 @@
     </div>
 </section>
 
-<!-- Business Services Highlight -->
+
 <section id="home-services" class="services-section">
     <div class="container">
         <div class="section-header text-center">
@@ -176,7 +176,7 @@
     </div>
 </section>
 
-<!-- Featured Fleets Section -->
+
 <section id="home-fleets" class="fleets-section">
     <div class="container">
         <div class="section-header text-center">
@@ -217,7 +217,7 @@
     </div>
 </section>
 
-<!-- Corporate News Section (Expanded Content) -->
+
 <section id="home-news" class="news-section" style="padding: 100px 0; background-color: #ffffff;">
     <div class="container">
         <div class="section-header text-center">
@@ -253,5 +253,4 @@
 </section>
 
 @endsection
-
 

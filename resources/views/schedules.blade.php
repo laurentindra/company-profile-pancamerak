@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- Page Header Banner -->
+
 <section class="page-header" style="background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%); padding: 60px 0; border-bottom: 1px solid var(--border-dark); text-align: center; color: #ffffff;">
     <div class="container">
         <span class="sub-title">Jadwal Keberangkatan</span>
@@ -11,7 +11,7 @@
     </div>
 </section>
 
-<!-- Search Form Section -->
+
 <section class="schedule-section" style="padding: 80px 0; background-color: var(--bg-light);">
     <div class="container">
         <div class="search-box-wrapper" style="background-color: #ffffff; padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border: 1px solid var(--border-light);">
@@ -49,20 +49,20 @@
             </form>
         </div>
 
-        <!-- Results Container -->
+        
         <div id="search-results" class="search-results-container" style="display: none;">
             <div class="results-header">
                 <h3>Hasil Pencarian Jadwal</h3>
                 <p id="results-meta"></p>
             </div>
             <div id="results-list" class="results-list">
-                <!-- AJAX results injected here -->
+                
             </div>
         </div>
     </div>
 </section>
 
-<!-- Default Reference Tariffs Section (Expanded Content) -->
+
 <section class="tariffs-reference-section" style="padding: 80px 0; background-color: #ffffff; border-top: 1px solid var(--border-light);">
     <div class="container">
         <div class="section-header text-center">
@@ -71,7 +71,7 @@
             <p class="section-desc">Informasi resmi jadwal pelayaran reguler dan tabel tarif tiket penumpang & kendaraan PT PANCA MERAK SAMUDERA.</p>
         </div>
 
-        <!-- Schedule Summary Cards -->
+        
         <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
             @foreach($passengerShips as $ship)
                 <div style="background-color: var(--bg-light); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm);">
@@ -95,12 +95,12 @@
             @endforeach
         </div>
 
-        <!-- Detailed Official Tariff Tables -->
+        
         <div style="margin-top: 60px;">
             <h3 style="text-align: center; color: var(--primary-navy); margin-bottom: 10px; font-size: 1.6rem;">Tabel Tarif Tiket Penumpang & Kendaraan (Harga Kantor)</h3>
             <p style="text-align: center; color: var(--text-light-muted); font-size: 0.9rem; margin-bottom: 40px;">* Harga tiket penumpang sudah termasuk Pass Penumpang (LC) Rp 44.500</p>
 
-            <!-- Table 1: Parepare - Samarinda & Parepare - Bontang -->
+            
             <div style="background-color: var(--bg-light); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm); margin-bottom: 40px;">
                 <div style="background-color: var(--primary-navy); color: white; padding: 14px 20px; border-radius: var(--radius-sm); margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
                     <h4 style="margin: 0; font-size: 1.1rem; color: #ffffff;">RUTE: PAREPARE - SAMARINDA & PAREPARE - BONTANG</h4>
@@ -186,7 +186,7 @@
                 </div>
             </div>
 
-            <!-- Table 2: Parepare - Nunukan -->
+            
             <div style="background-color: var(--bg-light); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm);">
                 <div style="background-color: var(--primary-navy); color: white; padding: 14px 20px; border-radius: var(--radius-sm); margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
                     <h4 style="margin: 0; font-size: 1.1rem; color: #ffffff;">RUTE: PAREPARE - NUNUKAN</h4>
@@ -277,4 +277,3 @@
 </section>
 
 @endsection
-

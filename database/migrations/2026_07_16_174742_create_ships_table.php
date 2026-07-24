@@ -6,19 +6,16 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('ships', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('type'); // passenger, tugboat, barge
+            $table->string('type'); 
             $table->string('route')->nullable();
             $table->string('capacity')->nullable();
-            $table->integer('gt')->nullable(); // Gross Tonnage
-            $table->integer('nt')->nullable(); // Net Tonnage
+            $table->integer('gt')->nullable(); 
+            $table->integer('nt')->nullable(); 
             $table->string('dimensions')->nullable();
             $table->string('engine')->nullable();
             $table->text('description')->nullable();
@@ -27,9 +24,6 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('ships');

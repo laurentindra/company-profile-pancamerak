@@ -9,9 +9,6 @@ use Illuminate\Support\Facades\File;
 
 class NewsController extends Controller
 {
-    /**
-     * Display a listing of news articles.
-     */
     public function index(Request $request)
     {
         $query = News::query();
@@ -34,17 +31,11 @@ class NewsController extends Controller
         return view('admin.news.index', compact('news'));
     }
 
-    /**
-     * Show the form for creating a new news article.
-     */
     public function create()
     {
         return view('admin.news.create');
     }
 
-    /**
-     * Store a newly created news article in storage.
-     */
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -76,18 +67,12 @@ class NewsController extends Controller
         return redirect()->route('admin.news.index')->with('success', 'Berita berhasil diterbitkan!');
     }
 
-    /**
-     * Show the form for editing the specified news article.
-     */
     public function edit($id)
     {
         $article = News::findOrFail($id);
         return view('admin.news.edit', compact('article'));
     }
 
-    /**
-     * Update the specified news article in storage.
-     */
     public function update(Request $request, $id)
     {
         $article = News::findOrFail($id);
@@ -125,9 +110,6 @@ class NewsController extends Controller
         return redirect()->route('admin.news.index')->with('success', 'Berita berhasil diperbarui!');
     }
 
-    /**
-     * Remove the specified news article from storage.
-     */
     public function destroy($id)
     {
         $article = News::findOrFail($id);

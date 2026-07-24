@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- Page Header Banner -->
+
 <section class="page-header" style="background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%); padding: 60px 0; border-bottom: 1px solid var(--border-dark); text-align: center; color: #ffffff;">
     <div class="container">
         <span class="sub-title">Daftar Armada</span>
@@ -11,10 +11,10 @@
     </div>
 </section>
 
-<!-- Fleets Directory Section -->
+
 <section class="fleets-section" style="padding: 80px 0; background-color: var(--primary-navy);">
     <div class="container">
-        <!-- Filter Tabs -->
+        
         <div class="filter-wrapper">
             <button class="filter-btn active" data-filter="all">Semua Armada ({{ count($ships) }})</button>
             <button class="filter-btn" data-filter="passenger">Kapal Penumpang</button>
@@ -22,7 +22,7 @@
             <button class="filter-btn" data-filter="barge">Tongkang (Barge)</button>
         </div>
         
-        <!-- Fleets Grid -->
+        
         <div class="fleets-grid">
             @foreach($ships as $ship)
                 @php

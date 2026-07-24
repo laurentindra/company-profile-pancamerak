@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- Page Header Banner -->
+
 <section class="page-header" style="background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%); padding: 60px 0; border-bottom: 1px solid var(--border-dark); text-align: center; color: #ffffff;">
     <div class="container">
         <span class="sub-title">Spesialisasi Kami</span>
@@ -11,7 +11,7 @@
     </div>
 </section>
 
-<!-- Detailed Passenger Services Section -->
+
 <section class="services-detail" style="padding: 80px 0; background-color: #ffffff;">
     <div class="container">
         <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center;">
@@ -69,7 +69,7 @@
     </div>
 </section>
 
-<!-- Detailed Coal & Tugboat/Barge Services Section -->
+
 <section class="services-detail" style="padding: 80px 0; background-color: var(--bg-light); border-top: 1px solid var(--border-light);">
     <div class="container">
         <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 60px; align-items: center;">
@@ -108,4 +108,3 @@
 </section>
 
 @endsection
-

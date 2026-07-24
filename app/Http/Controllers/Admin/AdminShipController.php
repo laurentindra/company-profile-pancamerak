@@ -94,7 +94,6 @@ class AdminShipController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            // Delete old image if exists and local
             if ($ship->image_path && File::exists(public_path($ship->image_path))) {
                 File::delete(public_path($ship->image_path));
             }

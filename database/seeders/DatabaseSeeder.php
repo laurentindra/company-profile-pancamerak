@@ -14,12 +14,8 @@ class DatabaseSeeder extends Seeder
 {
     use WithoutModelEvents;
 
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // 0. SEED ADMIN USER
         User::firstOrCreate(
             ['email' => 'admin@pancamerak.co.id'],
             [
@@ -28,8 +24,6 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-        // 1. SEED SHIPS
-        // A. Passenger Ships
         $cattleya = Ship::create([
             'name' => 'KM. Cattleya Express',
             'type' => 'passenger',
@@ -69,8 +63,6 @@ class DatabaseSeeder extends Seeder
             'image_path' => 'images/ships/pantokrator_2.jpg,images/ships/pantokrator_1.png'
         ]);
 
-        // B. Coal Barges (Tongkang Batu Bara)
-        // Charles Class - 300 Feet
         Ship::create([
             'name' => 'Barge Charles 205',
             'type' => 'barge',
@@ -115,7 +107,6 @@ class DatabaseSeeder extends Seeder
             'image_path' => 'images/ships/charles_210_1.jpg'
         ]);
 
-        // PMS Class - 270 Feet
         Ship::create([
             'name' => 'Barge PMS 201',
             'type' => 'barge',
@@ -160,7 +151,6 @@ class DatabaseSeeder extends Seeder
             'image_path' => 'images/ships/pms_206_1.jpeg'
         ]);
 
-        // C. Tugboats (Kapal Tunda Hector)
         Ship::create([
             'name' => 'Tugboat Hector 102',
             'type' => 'tugboat',
@@ -239,9 +229,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        // 2. SEED SCHEDULES FOR PASSENGER SHIPS
 
-        // KM. Cattleya Express (Parepare <-> Bontang)
         Schedule::create([
             'ship_id' => $cattleya->id,
             'origin_port' => 'Parepare',
@@ -266,7 +254,6 @@ class DatabaseSeeder extends Seeder
             'price_vehicle' => 3400000
         ]);
 
-        // KM. Queen Soya (Parepare <-> Samarinda)
         Schedule::create([
             'ship_id' => $queenSoya->id,
             'origin_port' => 'Parepare',
@@ -291,7 +278,6 @@ class DatabaseSeeder extends Seeder
             'price_vehicle' => 3400000
         ]);
 
-        // KM. Pantokrator (Parepare <-> Nunukan)
         Schedule::create([
             'ship_id' => $pantokrator->id,
             'origin_port' => 'Parepare',
@@ -316,7 +302,6 @@ class DatabaseSeeder extends Seeder
             'price_vehicle' => 5200000
         ]);
 
-        // 3. SEED NEWS ARTICLES
         News::create([
             'title' => 'PMS Siap Hadapi Tantangan Distribusi Batubara Semester II',
             'category' => 'KORPORASI',

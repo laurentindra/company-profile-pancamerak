@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- PRELOADER & ENTRANCE ANIMATION ---
     const preloader = document.getElementById('preloader');
     if (preloader) {
         window.addEventListener('load', () => {
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1800);
         });
 
-        // Backup to force-hide if load event takes too long
         setTimeout(() => {
             if (!document.body.classList.contains('loaded')) {
                 preloader.style.opacity = '0';
@@ -23,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('loaded');
     }
 
-    // --- MOBILE NAV TOGGLE ---
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -34,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.toggle('active');
         });
 
-        // Close menu when a link is clicked
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navToggle.classList.remove('active');
@@ -43,13 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- FLEET GALLERY FILTERING ---
     const filterButtons = document.querySelectorAll('.filter-btn');
     const fleetCards = document.querySelectorAll('.fleet-card');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Toggle active class in buttons
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
@@ -59,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const category = card.getAttribute('data-category');
                 if (filterValue === 'all' || category === filterValue) {
                     card.style.display = 'flex';
-                    // Animation delay simulation
                     card.style.opacity = '0';
                     setTimeout(() => {
                         card.style.opacity = '1';
@@ -72,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- SCHEDULE SEARCH SUBMISSION (AJAX) ---
     const searchForm = document.getElementById('search-schedule-form');
     const searchResults = document.getElementById('search-results');
     const resultsList = document.getElementById('results-list');
@@ -86,10 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const destination = document.getElementById('destination').value;
             const date = document.getElementById('travel_date').value;
 
-            // Fetch request parameters
             const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
-            // Show loading placeholder
             resultsList.innerHTML = `
                 <div style="text-align: center; padding: 40px; color: var(--text-light-muted);">
                     <svg style="animation: spin 1s linear infinite; margin-bottom: 12px; color: var(--accent-cyan);" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 10 10"/></svg>
@@ -98,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             searchResults.style.display = 'block';
             
-            // Scroll to results
             searchResults.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
             fetch('/search-schedule', {
@@ -186,7 +175,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Currency Formatter Helper
     function formatIDR(number) {
         return new Intl.NumberFormat('id-ID', {
             style: 'currency',
@@ -195,7 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }).format(number);
     }
 
-    // --- CONTACT & CHARTER INQUIRY FORM SIMULATION ---
     const contactForms = document.querySelectorAll('#contact-form');
     contactForms.forEach(form => {
         form.addEventListener('submit', (e) => {
@@ -218,7 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// --- VISION/MISSION TABS ---
 window.switchVisionTab = function(evt, tabName) {
     const tabContents = document.querySelectorAll('.v-tab-content');
     const tabButtons = document.querySelectorAll('.v-tab-btn');

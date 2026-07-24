@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- Page Header Banner -->
+
 <section class="page-header" style="background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%); padding: 60px 0; border-bottom: 1px solid var(--border-dark); text-align: center; color: #ffffff;">
     <div class="container">
         <span class="sub-title">Profil Korporat</span>
@@ -11,7 +11,7 @@
     </div>
 </section>
 
-<!-- Company History & Milestones -->
+
 <section class="about-section" style="padding: 80px 0; background-color: #ffffff;">
     <div class="container">
         <div class="about-grid">
@@ -80,7 +80,7 @@
     </div>
 </section>
 
-<!-- Organizational Management Structure -->
+
 <section class="management-section" style="padding: 80px 0; background-color: var(--bg-light); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
     <div class="container">
         <div class="section-header text-center">
@@ -89,7 +89,7 @@
             <p class="section-desc">Pimpinan kepengurusan maritim yang mengawal arah kemajuan dan keberlanjutan bisnis PT PANCA MERAK SAMUDERA.</p>
         </div>
         
-        <!-- Management Grid Cards -->
+        
         <div class="management-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 50px;">
             <div class="member-card" style="background-color: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 24px; text-align: center; box-shadow: var(--shadow-sm);">
                 <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: #ffffff;">
@@ -146,7 +146,7 @@
             </div>
         </div>
 
-        <!-- Official Legal Table of Management -->
+        
         <div style="margin-top: 50px; background-color: #ffffff; padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
             <h3 style="color: var(--primary-navy); margin-bottom: 20px; font-size: 1.2rem; border-bottom: 2px solid var(--accent-cyan); padding-bottom: 10px;">Daftar Detail Kepengurusan Perusahaan</h3>
             <div class="table-responsive">
@@ -248,7 +248,7 @@
     </div>
 </section>
 
-<!-- Legalitas Section -->
+
 <section class="legal-section" style="padding: 80px 0; background-color: #ffffff;">
     <div class="container">
         <div class="section-header text-center">
@@ -311,5 +311,4 @@
 </section>
 
 @endsection
-
 

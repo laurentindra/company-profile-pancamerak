@@ -60,7 +60,7 @@
                 </div>
             </div>
             
-            <!-- Contact Form -->
+            
             <div class="contact-form-panel">
                 <h3>Hubungi Tim Kami</h3>
                 <p style="font-size: 0.85rem; color: var(--text-light-muted); margin-bottom: 25px;">Kirim pesan langsung kepada bagian operasional kami untuk permohonan informasi umum, agen logistik, atau kerjasama bisnis perkapalan.</p>
@@ -108,4 +108,3 @@
 </section>
 
 @endsection
-

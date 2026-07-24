@@ -19,9 +19,6 @@ class Ship extends Model
         'image_path'
     ];
 
-    /**
-     * Get array of image paths (supports multi-image ships separated by comma)
-     */
     public function getImagesAttribute(): array
     {
         if (empty($this->image_path)) {
@@ -35,9 +32,6 @@ class Ship extends Model
         return array_values(array_filter(array_map('trim', explode(',', $this->image_path))));
     }
 
-    /**
-     * Get first image path for thumbnails
-     */
     public function getFirstImageAttribute(): ?string
     {
         $images = $this->images;

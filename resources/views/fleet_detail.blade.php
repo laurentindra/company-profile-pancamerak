@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- Page Header Breadcrumb -->
+
 <section class="page-header" style="background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%); padding: 50px 0; border-bottom: 1px solid var(--border-dark); color: #ffffff;">
     <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
         <div>
@@ -15,12 +15,12 @@
     </div>
 </section>
 
-<!-- Detail Specifications Sheet -->
+
 <section class="fleet-detail-section" style="padding: 80px 0; background-color: #ffffff;">
     <div class="container">
         <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: flex-start; margin-bottom: 60px;">
             
-            <!-- Graphic Illustration, Gallery and Description -->
+            
             <div>
                 @php $images = $ship->images; @endphp
                 <div style="background-color: var(--primary-navy); border-radius: var(--radius-md); text-align: center; color: var(--accent-cyan-light); margin-bottom: 15px; border: 1px solid var(--border-dark); min-height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
@@ -58,7 +58,7 @@
                 </p>
             </div>
             
-            <!-- Tech Specs Tables -->
+            
             <div style="background-color: var(--bg-light); border: 1px solid var(--border-light); padding: 40px; border-radius: var(--radius-lg);">
                 <h3 style="color: var(--primary-navy); margin-bottom: 20px; border-bottom: 2px solid var(--accent-cyan); padding-bottom: 10px;">Spesifikasi Teknis</h3>
                 <table class="modal-specs-table" style="width: 100%;">
@@ -112,7 +112,7 @@
                     </tbody>
                 </table>
                 
-                <!-- Inquiry Form inside detail page -->
+                
                 <div style="margin-top: 40px; border-top: 2px dashed #cbd5e1; padding-top: 30px;">
                     <h4 style="color: var(--primary-navy); margin-bottom: 15px;">Form Keagenan & Sewa Khusus: {{ $ship->name }}</h4>
                     <form id="contact-form" class="inquiry-form" style="gap: 12px;">
@@ -141,7 +141,7 @@
             </div>
         </div>
         
-        <!-- Related / Suggested Fleets -->
+        
         @if(count($relatedShips) > 0)
             <div style="border-top: 1px solid var(--border-light); padding-top: 60px;">
                 <h3 style="color: var(--primary-navy); text-align: center; margin-bottom: 40px;">Armada Sejenis Lainnya</h3>

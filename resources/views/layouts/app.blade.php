@@ -8,19 +8,19 @@
     <title>PT PANCA MERAK SAMUDERA - Penyedia Kapal Penumpang & Logistik Batubara</title>
     <meta name="description" content="PT PANCA MERAK SAMUDERA menyediakan solusi angkutan laut hemat biaya dan berkelanjutan. Mengoperasikan armada kapal penumpang Cattleya Express, Queen Soya, Pantokrator, serta kapal tunda Hector & tongkang batubara.">
     
-    <!-- Favicon -->
+    
     <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
     
-    <!-- Google Fonts -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Main Style -->
+    
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-    <!-- Preloader / Welcome Animation -->
+    
     <div id="preloader">
         <div class="preloader-content">
             <div class="preloader-logo-wrapper">
@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <!-- Top Info Bar -->
+    
     <div class="top-bar">
         <div class="container top-bar-content">
             <div class="top-info">
@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <!-- Header Navigation -->
+    
     <header class="header">
         <div class="container header-container">
             <a href="{{ route('home') }}" class="logo">
@@ -67,14 +67,14 @@
                 </div>
             </a>
 
-            <!-- Mobile Nav Toggle -->
+            
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <!-- Nav Menu -->
+            
             <nav class="nav-menu">
                 <a href="{{ route('home') }}" class="nav-link {{ Route::is('home') ? 'active' : '' }}">Beranda</a>
                 <a href="{{ route('about') }}" class="nav-link {{ Route::is('about') ? 'active' : '' }}">Profil</a>
@@ -86,12 +86,12 @@
         </div>
     </header>
 
-    <!-- Main Content Area -->
+    
     <main>
         @yield('content')
     </main>
 
-    <!-- Footer Section -->
+    
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-col about-col">
@@ -147,13 +147,13 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Widget -->
+    
     <a href="https://wa.me/62813522385" target="_blank" class="whatsapp-float" aria-label="Chat via WhatsApp">
         <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.503-5.729-1.46L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.748.002-2.607-1.01-5.059-2.85-6.902C16.643 2.113 14.193.987 11.587.987c-5.442 0-9.868 4.373-9.872 9.753-.001 1.748.477 3.456 1.386 4.982l-.996 3.636 3.738-.967zM17.8 14.6c-.284-.144-1.683-.831-1.947-.927-.263-.096-.454-.144-.645.144-.19.288-.737.927-.904 1.12-.167.192-.335.216-.62.072-.284-.144-1.2-.442-2.285-1.41-.845-.753-1.415-1.683-1.58-1.97-.166-.288-.018-.444.124-.587.129-.129.284-.335.426-.503.14-.168.188-.288.284-.48.096-.192.048-.361-.024-.505-.072-.144-.646-1.558-.885-2.133-.233-.564-.47-.488-.646-.497-.167-.008-.358-.01-.55-.01s-.502.072-.765.36c-.263.288-1.004.982-1.004 2.397 0 1.415 1.028 2.782 1.17 2.974.144.192 2.025 3.09 4.905 4.331.685.295 1.22.472 1.637.605.69.219 1.317.188 1.812.115.55-.082 1.683-.687 1.922-1.353.238-.667.238-1.24.167-1.353-.07-.113-.263-.211-.548-.353z"/></svg>
         <span>Tanya Kami</span>
     </a>
 
-    <!-- Custom App Script -->
+    
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

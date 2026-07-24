@@ -104,7 +104,7 @@
     }
 </style>
 
-<!-- Top Quick Actions -->
+
 <div class="quick-actions">
     <a href="{{ route('admin.ships.create') }}" class="btn btn-primary">
         <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
@@ -116,7 +116,7 @@
     </a>
 </div>
 
-<!-- Stats Grid -->
+
 <div class="stats-grid">
     <div class="stat-card">
         <div class="stat-icon accent">
@@ -169,9 +169,9 @@
     </div>
 </div>
 
-<!-- Two Columns Grid -->
+
 <div class="grid-two-col">
-    <!-- Recent Ships Card -->
+    
     <div class="card">
         <div class="card-header">
             <h3>Armada Terintegrasi Terbaru</h3>
@@ -211,7 +211,7 @@
         </div>
     </div>
 
-    <!-- Recent Schedules Card -->
+    
     <div class="card">
         <div class="card-header">
             <h3>Jadwal Pelayaran Aktif</h3>
