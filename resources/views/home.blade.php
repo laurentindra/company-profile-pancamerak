@@ -160,8 +160,8 @@
                     <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
                 <h3>Kapal Penumpang Niaga Terjadwal</h3>
-                <p>Mengoperasikan kapal-kapal penumpang berkapasitas besar di rute Pare-Pare, Samarinda, dan Nunukan dengan kenyamanan dek tidur, fasilitas kantin, dan kepatuhan keselamatan tinggi.</p>
-                <a href="{{ route('services') }}" class="btn btn-outline btn-sm">Lihat Detail Layanan</a>
+                <p>Mengoperasikan armada kapal penumpang berkapasitas besar di rute <strong>Pare-Pare &ndash; Nunukan (KM. Pantokrator)</strong>, <strong>Pare-Pare &ndash; Samarinda (KM. Queen Soya)</strong>, dan <strong>Pare-Pare &ndash; Bontang (KM. Cattleya Express)</strong> dengan fasilitas dek kabin, kantin, dan standar keselamatan maritim yang terpercaya.</p>
+                <a href="{{ route('services') }}#penumpang" class="btn btn-outline btn-sm">Lihat Detail Layanan Penumpang &rarr;</a>
             </div>
             
             <div class="service-card">
@@ -170,7 +170,7 @@
                 </div>
                 <h3>Sewa Tongkang Batubara & Bijih Besi</h3>
                 <p>Penyewaan kapal tunda (Tugboat) bertenaga ganda beserta tongkang (Barge) 300 feet untuk kelancaran logistik tambang curah di seluruh Kalimantan, Jawa, dan Sulawesi.</p>
-                <a href="{{ route('services') }}" class="btn btn-outline btn-sm">Lihat Prosedur Sewa</a>
+                <a href="{{ route('services') }}#sewa-tongkang" class="btn btn-outline btn-sm">Lihat Prosedur Sewa Tongkang &rarr;</a>
             </div>
         </div>
     </div>

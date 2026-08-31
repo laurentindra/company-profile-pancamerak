@@ -113,8 +113,9 @@
                 <ul>
                     <li><a href="{{ route('home') }}">Beranda</a></li>
                     <li><a href="{{ route('about') }}">Profil & Sejarah</a></li>
-                    <li><a href="{{ route('services') }}">Layanan Bisnis</a></li>
-                    <li><a href="{{ route('schedules') }}">Pencarian Jadwal</a></li>
+                    <li><a href="{{ route('services') }}#penumpang">Kapal Penumpang Niaga</a></li>
+                    <li><a href="{{ route('services') }}#sewa-tongkang">Sewa Tongkang & Tugboat</a></li>
+                    <li><a href="{{ route('schedules') }}">Jadwal & Tarif Tiket</a></li>
                     <li><a href="{{ route('fleets') }}">Armada Kapal</a></li>
                 </ul>
             </div>

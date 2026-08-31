@@ -18,7 +18,7 @@
             <div class="about-text-content">
                 <h2>Sejarah & Pendirian Perusahaan</h2>
                 <p>PT PANCA MERAK SAMUDERA didirikan secara resmi pada tanggal 6 Desember 2001 di Kota Surabaya berdasarkan Akta Pendirian Perusahaan Nomor 8 oleh Notaris Yanita. Perusahaan memperoleh pengesahan badan hukum dari Departemen Hukum dan Hak Asasi Manusia Republik Indonesia pada tanggal yang sama.</p>
-                <p>Didirikan dengan visi untuk memfasilitasi integrasi ekonomi antar-pulau, kami memulai operasional kapal penumpang niaga dengan meluncurkan rute pelayaran reguler Sulawesi - Kalimantan Utara - Nunukan. Kesuksesan rute awal memicu ekspansi layanan penumpang kedua pada tahun 2007 (MV Queen Soya) dan ketiga pada tahun 2013 (MV Pantokrator).</p>
+                <p>Didirikan dengan visi untuk memfasilitasi integrasi ekonomi antar-pulau, kami memulai operasional kapal penumpang niaga dengan melayani rute-rute pelayaran reguler strategis Sulawesi ke Kalimantan: <strong>Pare-Pare &ndash; Nunukan (KM. Pantokrator)</strong>, <strong>Pare-Pare &ndash; Samarinda (KM. Queen Soya)</strong>, dan <strong>Pare-Pare &ndash; Bontang (KM. Cattleya Express)</strong>.</p>
                 <p>Seiring pesatnya perkembangan sektor energi tambang, pada tahun 2010 kami mengepakkan sayap bisnis dengan memasuki logistik laut pengangkutan batubara curah (coal bulk shipping) melalui skema penyewaan kapal tunda dan tongkang bagi perusahaan tambang batubara terkemuka nasional.</p>
                 
                 <h3 style="margin-top: 40px; margin-bottom: 20px; color: var(--primary-navy);">Visi & Misi Perusahaan</h3>
@@ -49,15 +49,15 @@
                     <div class="timeline-item">
                         <div class="timeline-year">2005</div>
                         <div class="timeline-desc">
-                            <h4>Akuisisi Cattleya Express</h4>
-                            <p>Meluncurkan pelayaran kapal penumpang Cattleya Express rute Pare-Pare - Nunukan (kapasitas >1.400 Penumpang).</p>
+                            <h4>Armada KM. Cattleya Express</h4>
+                            <p>Meluncurkan operasional kapal penumpang KM. Cattleya Express untuk melayani rute Pare-Pare &ndash; Bontang (kapasitas &gt;1.400 Penumpang).</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-year">2007</div>
                         <div class="timeline-desc">
-                            <h4>Peluncuran MV Queen Soya</h4>
-                            <p>Membeli MV Queen Soya untuk memperkuat jalur pelayaran niaga Pare-Pare - Samarinda.</p>
+                            <h4>Peluncuran KM. Queen Soya</h4>
+                            <p>Membeli KM. Queen Soya untuk memperkuat jalur pelayaran niaga Pare-Pare &ndash; Samarinda (kapasitas &gt;1.500 Penumpang).</p>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -70,8 +70,8 @@
                     <div class="timeline-item">
                         <div class="timeline-year">2013</div>
                         <div class="timeline-desc">
-                            <h4>Armada Penumpang Ketiga</h4>
-                            <p>Menghadirkan MV Pantokrator untuk melayani rute pelayaran penumpang Samarinda - Pare-Pare.</p>
+                            <h4>Penambahan KM. Pantokrator</h4>
+                            <p>Menghadirkan armada KM. Pantokrator untuk melayani rute pelayaran penumpang Pare-Pare &ndash; Nunukan (kapasitas &gt;1.600 Penumpang).</p>
                         </div>
                     </div>
                 </div>

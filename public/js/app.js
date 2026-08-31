@@ -65,6 +65,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Auto trigger fleet filter from URL query param if present (?type=passenger / ?type=tugboat / ?type=barge)
+    const urlParams = new URLSearchParams(window.location.search);
+    const typeParam = urlParams.get('type') || urlParams.get('filter');
+    if (typeParam) {
+        const matchingBtn = document.querySelector(`.filter-btn[data-filter="${typeParam}"]`);
+        if (matchingBtn) {
+            matchingBtn.click();
+        }
+    }
+
     const searchForm = document.getElementById('search-schedule-form');
     const searchResults = document.getElementById('search-results');
     const resultsList = document.getElementById('results-list');

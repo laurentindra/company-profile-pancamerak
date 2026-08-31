@@ -108,7 +108,7 @@
                 <div class="corp-tariff-header">
                     <div>
                         <h3>RUTE: PAREPARE &ndash; SAMARINDA & PAREPARE &ndash; BONTANG</h3>
-                        <span>KM. Queen Soya & KM. Cattleya Express</span>
+                        <span>KM. Queen Soya (Tujuan Samarinda) & KM. Cattleya Express (Tujuan Bontang)</span>
                     </div>
                 </div>
 
