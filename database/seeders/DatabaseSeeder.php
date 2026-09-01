@@ -159,7 +159,7 @@ class DatabaseSeeder extends Seeder
             'dimensions' => '26,53 x 8,00 x 3,65 m',
             'engine' => '2 x 823 HP',
             'description' => 'Kapal tunda (TB H 102) bermesin ganda 823 HP milik PT PANCA MERAK SAMUDERA.',
-            'image_path' => 'images/ships/hector_102_1.jpg,images/ships/hector_102_2.jpg'
+            'image_path' => 'images/ships/tugboat_hector_102.png,images/ships/hector_102_1.jpg,images/ships/hector_102_2.jpg'
         ]);
 
         Ship::create([
